@@ -1,0 +1,92 @@
+<style>
+    table thead th{
+        padding: 3px 3px 3px 3px;
+        background: #e9fafe;
+        font-size: 12px;
+    }
+    table tbody td {
+        padding-left: 12px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    label {
+        color: #555;
+        font-size: 11px;
+        padding: 3px 10px;
+    }
+</style>
+<div  class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="h3" ng-click='loadList()' class="createOrder"> Create Order</h3>
+        </div>
+        <div class="col-md-6">
+            <div class="orderTable" ng-hide="selected.length === 0" ng-click="isOpened = !isOpened"> Show order table</div>
+        </div>
+    </div>
+    <div class="row responsive-table" ng-if="isOpened">
+        <div class="col-md-12 scrollable" style="max-height: 250px;">
+            <table class="table-bordered table-striped" style="margin: auto;"  >
+                <thead>
+                    <th nowrap>#</th>
+                    <th>Sales Person</th>
+                    <th>
+                        <a href="#" ng-click="sortBy('name')">Name</a>
+                        <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse:reverse}"></span>
+                    </th>
+                    <th>
+                        <a href="" ng-click="sortBy('size')">Size</a>
+                        <span class="sortorder" ng-show="propertyName === 'size'" ng-class="{reverse:reverse}"></span>
+                    </th>
+                    <th>Quantity</th>
+                    <th>Min-Price</th>
+                    <th>Max-Price</th>
+                    <th>Selling-Price</th>
+                </thead>
+                <tr ng-repeat="obj in masterPrice| orderBy : propertyName:reverse as results track by $index">
+                    <td>{{$index+1}}</td>
+                    <td>{{obj.salesPerson}}</td>
+                    <td>{{obj.name}}</td>
+                    <td>{{obj.size}}</td>
+                    <td>1</td>
+                    <td>{{obj.min}}</td>
+                    <td>{{obj.max}}</td>
+                    <td>{{obj.sPrice}}</td>
+                </tr>
+            </table><br/><br/><br/><br/>
+        </div>
+    </div><br/>
+    <div class="co-table">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="flash count" ng-hide="totalEntries === null">
+                    <span class="totalCount">{{totalEntries}}</span>
+                </div>
+            </div>
+            <div class="col-md-6" ng-hide="liqOptions === null">
+                <input type="text" class="form-control" ng-model="searchTerm" placeholder="Search text goes here" style="width:300px;float:right;margin-bottom:5px;" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 scrollable">
+                <table  class="createOrder-table table-bordered table-striped">
+                    <tr ng-repeat=" x in liquorNameResponse |filter:searchTerm">
+                        <td><span>{{ x }}</span></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 12oz', x,'12 oz')" ng-model="m12[x]" />&nbsp;12Oz</label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 50ml', x,'50 ml')" ng-model="m50[x]" />&nbsp;50ml</label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 100ml', x,'100 ml')" ng-model="m100[x]"/>&nbsp;100ml</label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 200ml', x,'200 ml')" ng-model="m200[x]"/>&nbsp;200ml </label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 375ml', x,'375 ml')" ng-model="m375[x]"/>&nbsp;375ml </label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 500ml', x,'500 ml')" ng-model="m500[x]"/>&nbsp;500ml </label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 750ml', x,'750 ml')" ng-model="m750[x]"/>&nbsp;750ml </label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 1Lt', x,'1 Liter')" ng-model="lt1[x]"/>&nbsp;1Lt </label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 1.5Lt',x ,'1.5 Liter')" ng-model="lt15[x]"/>&nbsp;1.5Lt</label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 1.75Lt',x ,'1.75 Liter')" ng-model="lt175[x]"/>&nbsp;1.75Lt </label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 3Lt',x ,'3 Liter')" ng-model="lt13[x]"/>&nbsp;3Lt </label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 5Lt',x ,'5 Liter')" ng-model="lt5[x]"/>&nbsp;5Lt </label></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,151 @@
+<div class="sideNav-drawer-container">
+    <div class="sideNav-drawer" ng-show="toggleSlide">
+        <br/>
+        <button type="button" class="myBtn btn-cancel-pr" ng-click="showAndHideTabs('reportByLiquorName')">By Liquor Name</button>
+        <br/><br class="desktop-only"/><br class="desktop-only"/>
+        <button type="button" class="myBtn btn-cancel-pr" ng-click="showAndHideTabs('paymentHistory')">Payment History</button>
+        <br/><br class="desktop-only"/><br class="desktop-only"/>
+        <button type="button" class="myBtn btn-cancel-pr" ng-click="showAndHideTabs('loadWholeInventroy')">Draw List</button>
+        <br/><br class="desktop-only"/><br class="desktop-only"/>
+        <button type="button" class="myBtn btn-cancel-pr" ng-click="filterInvoiceNum(responseData, 'invoiceNum')">Invoices Search</button><br/>
+
+    </div>
+    <div class="sideNav-drawer-content">
+        <button _ngcontent-c0="" class="myBtn btn-cancel-pr slide-button" mat-button="" type="button" style="position:absolute;z-index: 1;"ng-click="sideNav()">
+            <span class="arrow-inBtn" ng-show="open1">&#8810;</span>
+            Side Nav
+            <span class="arrow-inBtn" ng-show="open2">&#8811;</span>
+        </button>
+        <div>
+            <h2 class="page-title">{{pageTitle}}</h2>
+            <div class="row" ng-hide="byLiquorNameUI">
+                <div class="col-md-12">
+                    <div class="form-container" [hidden]="reportByLiquorNameHide">
+                        <form [formGroup]='reportSearchForm' (ngSubmit)='searchLiquorReport(reportSearchForm.value)' class="">
+                            <div class="row form-group">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="liqName"> Buying report of Liquor</label>
+                                        <select id="liqName"class="form-control" ng-model="liquorName" ng-change="selectLiquorName(liquorName)"  placeholder="Liquor Name">
+                                            <option value=""  ng-selected="$first">Liquor Name</option>
+                                            <option ng-repeat="obj in liquorNameResponse" value="{{obj}}">{{obj}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6"></div>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h6>Priced report of the {{liquorName}}</h6>
+                            </div>
+                        </div><br/>
+                        <div class="form-check" ng-repeat="obj in liqSizeForRadio track by $index" name="">
+                            <label class="radio-container">{{obj}}
+                                    <input type="radio" checked="checked" name="LiqSizeRadio" ng-model="sizeR" value="{{obj}}" ng-click="selectedRadiosize(obj)">
+                                        <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row responsive-table" ng-hide="(responseData === null ||responseData ==='') && (byLiquorNameUI === true ||byPhUI === true )">
+                <div class="col-md-2">
+                    <div ng-hide="totalEntries === null" >
+                        <span class="totalCount flash badge-1 badge-pill badge-success desktop-only" ng-style="totalEntries> 999?{'font-size':'12px'}:{'font-size':'14px'}">{{totalEntries}}</span>
+                        <!--span class="totalCount flash badge badge-pill badge-success desktop-only" ng-style="totalEntries> 999?{'padding':'15px 8px'}:{'padding': '15px 13px'}">{{totalEntries}}</span-->
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-6" style="text-align:center">
+                    <input type="text" class="form-control" ng-model="qq" placeholder="Search text goes here" style="float:right;margin-bottom:5px;"/>
+                </div>
+            </div>
+            <div class="row responsive-table" ng-hide="(responseData === null ||responseData ==='') && (byLiquorNameUI === true ||byPhUI === true )">
+                <div class="col-md-12 scrollable">
+                    <table class="table table-bordered table-striped" >
+                        <thead>
+                            <tr class="">
+                                <th nowrap class="desktop-only">
+                                    <a href="javascript:void(0)" ng-click="sortBy('invoiceDate')">InvoiceDate</a>
+                                    <span class="sortorder" ng-show="propertyName === 'invoiceDate'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th nowrap class="desktop-only">
+                                    <a href="javascript:void(0)" ng-click="sortBy('invoiceNum')">InvoiceNum</a>
+                                    <span class="sortorder" ng-show="propertyName === 'invoiceNum'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th nowrap ng-show="rByLName">
+                                    <a href="javascript:void(0)" ng-click="sortBy('liqName')">LiquorName</a>
+                                    <span class="sortorder" ng-show="propertyName === 'liqName'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th nowrap ng-show="rByLName">
+                                    <a href="javascript:void(0)" ng-click="sortBy('liqSize')">Size</a>
+                                    <span class="sortorder" ng-show="propertyName === 'liqSize'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th nowrap class="desktop-only" ng-show="rByLName">
+                                    <a href="javascript:void(0)" ng-click="sortBy('salesPerson')">SalesPerson</a>
+                                    <span class="sortorder" ng-show="propertyName === 'salesPerson'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th nowrap ng-show="rByLName">
+                                    <a href="javascript:void(0)" ng-click="sortBy('price')" >Price</a>
+                                    <span class="sortorder" ng-show="propertyName === 'price'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th nowrap ng-show="rByLName">
+                                    <a href="javascript:void(0)" ng-click="sortBy('sellPrice')">SellingPrice</a>
+                                    <span class="sortorder" ng-show="propertyName === 'sellPrice'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th nowrap class="desktop-only" ng-show="rByLName">
+                                    <a href="javascript:void(0)" ng-click="sortBy('quantity')">Quantity</a>
+                                    <span class="sortorder" ng-show="propertyName === 'quantity'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th nowrap class="desktop-only" ng-show="pHistory">
+                                    <a href="javascript:void(0)" ng-click="sortBy('company')" >Company</a>
+                                    <span class="sortorder" ng-show="propertyName === 'company'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th class="desktop-only" ng-show="pHistory">
+                                    <a href="javascript:void(0)" ng-click="sortBy('dueDate')">Due Date</a>
+                                    <span class="sortorder" ng-show="propertyName === 'dueDate'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th class="desktop-only" ng-show="pHistory">
+                                    <a href="javascript:void(0)" ng-click="sortBy('amount')">Due Amount</a>
+                                    <span class="sortorder" ng-show="propertyName === 'amount'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                                <th nowrap class="desktop-only" ng-show="pHistory">
+                                    <a href="javascript:void(0)" ng-click="sortBy('paidWith')">Check No:</a>
+                                    <span class="sortorder" ng-show="propertyName === 'paidWith'" ng-class="{reverse:reverse}"></span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="d in responseData | filter:qq | orderBy : propertyName:reverse as results track by $index">
+                                <td nowrap style="padding-left:0;padding-right:5px;" class="desktop-only" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">
+                                    <b style="color:#0db3d0; float:left;padding-right:10px;">{{$index+1}}. </b>
+                                    <span style="float:right;">{{d.invoiceDate | date: 'MMM-dd-yy'}}</span>
+                                </td>
+                                <td nowrap class="desktop-only" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.invoiceNum}}</td>
+                                <td nowrap ng-show="rByLName" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.liqName}}</td>
+                                <td nowrap ng-show="rByLName" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.liqSize}}</td>
+                                <td nowrap ng-show="rByLName" class="desktop-only"ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.salesPerson}}</td>
+                                <td nowrap ng-show="rByLName" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.price}}</td>
+                                <td nowrap nowrap ng-show="rByLName" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.sellPrice}}
+                                    <div class="badged" ng-hide="d.price/0.7 < d.sellPrice && d.price/0.6 > d.sellPrice"
+                                        ng-style="d.price/0.7 > d.sellPrice && {'background-color': '#ed4c4c'} ||{'background-color': '#0b8203'}">
+                                        {{d.sellPrice < d.price/0.7 ? (((d.sellPrice - d.price)/d.sellPrice)*100  | number : 0) : ''}}
+                                        {{ d.sellPrice > d.price/0.6 ? (((d.sellPrice - d.price)/d.sellPrice)*100 | number : 0) : ''}}
+                                    </div>
+                                </td>
+                                <td nowrap ng-show="rByLName" class="desktop-only" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">
+                                    <span ng-style="d.quantity.length > 10 ? {'font-size':'10px'} : {'font-size':'12px'}">{{d.quantity}}</span></td>
+                                <td nowrap ng-style="d.paidWith !== '' ? {'color':'green'} : {'color':'red'}" ng-show="pHistory">{{d.company}}</td>
+                                <td ng-style="d.paidWith !== '' ? {'color':'green'} : {'color':'red'}" ng-show="pHistory">{{d.dueDate | date: 'MMM-dd-yy'}}</td>
+                                <td ng-style="d.paidWith !== '' ? {'color':'green'} : {'color':'red'}" ng-show="pHistory">{{d.amount}}</td>
+                                <td ng-style="d.paidWith !== '' ? {'color':'green'} : {'color':'red'}" ng-show="pHistory">{{d.paidWith}}</td>
+                                <!--td><pre>{{d|json}}</pre></td-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div><!--pre>{{responseData[0]| json}}</pre-->
+        </div><!-- REPORT BY LIQUOR NAME -->
+    </div>
+</div>

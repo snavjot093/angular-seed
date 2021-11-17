@@ -1,0 +1,208 @@
+<style>
+.grid-container {
+  display: grid;
+
+  grid-template-columns:20% 10% auto auto auto auto auto auto auto;
+  background-color: #EEE;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #CCFF55;
+  padding: 20px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.auto-grid {
+  --auto-grid-min-size: 14rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
+
+
+/* Presentational styles */
+
+body {
+  background: #efefef;
+  padding: 1rem;
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+
+.auto-grid > div {
+ /* padding: 5rem 1rem;*/
+ padding:2rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  background: #0078B3;/*#eb4d4b;*/
+  color: #ffffff;
+}
+</style><br/>
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+        <input type="text" ng-model="qq" class="form-control" style="position:fixed;top:55px;right:15px;width:320px;"/>
+    </div>
+</div><br/>
+<div class="auto-grid">
+  <div ng-repeat="cb in beerData | filter:qq | orderBy : propertyName:reverse as results track by $index">
+      <h5>{{cb.vendor}}</h5>
+      <div>{{cb.name}}</div>
+      <div>{{cb.date |date:"MMM-dd-yyyy"}}</div>
+      <div>${{cb.unitBuyingPrice}}</div>
+      <div>${{cb.sellingPrice}}</div>
+  </div>
+</div>
+<!--div class="grid-container" ng-repeat="d in beerData">
+  <div class="grid-item">{{d.name}}</div>
+  <div class="grid-item">{{d.vendor}}</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>
+</div>
+
+<div class="row responsive-table">
+    <div class="container jumbotron"><h3>Craft Beers</h3>
+        <form class="container-fluid beerForm" id="beerForm" name="beerForm" novalidate ng-class="{submitted:submitted}" ng-submit='onSubmit(beerForm)'>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="dueDate">Vendor</label>
+                    <input type="text" ng-model="craft.vendor" class="form-control" id="vendor" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="invoicedate">Invoice Date</label>
+                    <input type="date"  ng-model="craft.date" class="form-control" id="date" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="liqName">Beer Name</label>
+                    <input type="text" ng-model="craft.name" class="form-control" id="name" required />
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="quantityBought">Quantity Bought</label>
+                    <input type="number" ng-model="craft.quantityBought" class="form-control" id="quantityBought" required/>
+
+                </div>
+                <div class="col-md-4">
+                    <label for="liqType">Pack Price</label>
+                    <input type="number" ng-model="craft.packPrice" class="form-control" id="packPrice" required/>
+
+                </div>
+                <div class="col-md-4">
+                    <label for="liqSize">Pack Size</label>
+                    <input type="number" ng-model="craft.packSize" class="form-control" id="packSize" required/>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="sellPrice">Selling Pack</label>
+                    <input type="number" ng-model="craft.sellingPack" class="form-control" id="sellingPack" trim required/>
+                </div>
+                <div class="col-md-4">
+                    <label for="amount">Unit Buying Price</label>
+                    <input type="number" ng-model="craft.unitBuyingPrice" class="form-control" id="unitBuyingPrice" formControlName="unitBuyingPrice" trim required/>
+                </div>
+                <div class="col-md-4">
+                    <label for="quantity">Selling Price</label>
+                    <input type="number" ng-model="craft.sellingPrice" class="form-control" id="sellingPrice" formControlName="sellingPrice" required trim required/>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="btn-grouping" style="margin-bottom: 0">
+                        <button type="button" class="myBtn btn-cancel-pr" id="myBtn" ng-click="savePatient(beerForm.$invalid)">Cancel</button>
+                        <button type="submit" class="myBtn btn-pr"  [disabled]="!beerForm.valid">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<hr/>
+<div class="responsive-table">
+    <div class="row row-no-margin desktop-only-no-table">
+        <div class="col">
+            <div class="row">
+                <div class="col-sm-2 inventory-header">
+                    <a href="" ng-click="sortBy('date')">Date</a>
+                    <span class="sortorder" ng-show="propertyName === 'date'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-4 inventory-header">
+                    <a href="" ng-click="sortBy('name')">Name</a>
+                    <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-3 inventory-header">
+                    <a href="" ng-click="sortBy('vendor')">Vendor</a>
+                    <span class="sortorder" ng-show="propertyName === 'vendor'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-3 inventory-header">
+                    <a href="" ng-click="sortBy('quantityBought')">Quantity</a>
+                    <span class="sortorder" ng-show="propertyName === 'quantityBought'" ng-class="{reverse:reverse}"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row"->
+                <!--div class="col-sm-3 inventory-header">
+                    <a href="" ng-click="sortBy('packSize')">Pack Size</a>
+                    <span class="sortorder" ng-show="propertyName === 'packSize'" ng-class="{reverse:reverse}"></span>
+                </div-->
+                <!--div class="col-sm-3 inventory-header">
+                    <a href="" ng-click="sortBy('packPrice')">Pack Price</a>
+                    <span class="sortorder" ng-show="propertyName === 'packPrice'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-3 inventory-header">
+                    <a href="" ng-click="sortBy('sellingPack')">Pack Size</a>
+                    <span class="sortorder" ng-show="propertyName === 'sellPrice'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-3 inventory-header">
+                    <a href="" ng-click="sortBy('unitBuyingPrice')">Buying Price</a>
+                    <span class="sortorder" ng-show="propertyName === 'unitBuyingPrice'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-3 inventory-header">
+                    <a href="" ng-click="sortBy('sellingPrice')">Selling Price</a>
+                    <span class="sortorder" ng-show="propertyName === 'sellingPrice'" ng-class="{reverse:reverse}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scrollable">
+        <div class="no-table row row-no-margin" ng-repeat="d in beerData | filter:qq | orderBy : propertyName:reverse as results track by $index" style="font-size:12px; font-weight:600;">
+            <div class="col">
+                    <div class="row">
+                        <div class="col-sm-2 no-table-col"><span class="desktop-only-no-table" style="color:#0db3d0; float:left;padding-right:10px;font-size: 7px;">{{$index+1}}. </span><label class="m-label">Date:&nbsp;</label>{{d.date | date: 'MMM-dd-yy'}}</div>
+                        <div class="col-sm-4 no-table-col"><label class="m-label">Name:&nbsp;</label>{{d.name}}</div>
+                        <div class="col-sm-3 no-table-col"><label class="m-label">Vendor:&nbsp;</label>{{d.vendor}}</div>
+                        <div class="col-sm-3 no-table-col"><label class="m-label">Quantity Bought:&nbsp;</label>{{d.quantityBought}}</div>
+                    </div>
+            </div>
+            <div class="col">
+                <div class="row"-->
+                    <!--div class="col-sm-3 no-table-col"><label class="m-label">Pack Size:&nbsp;</label>{{d.packSize}}</div-->
+                    <!--div class="col-sm-3 no-table-col"><label class="m-label">Pack Price:&nbsp;</label>{{d.packPrice}}</div>
+                    <div class="col-sm-3 no-table-col"><label class="m-label">Pack Size:&nbsp;</label>{{d.sellingPack}}-->
+                        <!--div ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.sellPrice}}
+                            <div class="badged" ng-hide="d.price/0.7 < d.sellPrice && d.price/0.6 > d.sellPrice"
+                                ng-style="d.price/0.7 > d.sellPrice && {'background-color': '#ed4c4c'} ||{'background-color': '#0b8203'}">
+                                {{d.sellPrice < d.price/0.7 ? (((d.sellPrice - d.price)/d.sellPrice)*100  | number : 0) : ''}}
+                                {{ d.sellPrice > d.price/0.6 ? (((d.sellPrice - d.price)/d.sellPrice)*100 | number : 0) : ''}}
+                            </div>
+                        </div-->
+
+                    <!--/div>
+                    <div class="col-sm-3 no-table-col"><label class="m-label">Buying Price:&nbsp;</label>{{d.unitBuyingPrice}}</div>
+                    <div class="col-sm-3 no-table-col"><label class="m-label">Selling Price:&nbsp;</label>{{d.sellingPrice}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div--><br/><br/><br/>

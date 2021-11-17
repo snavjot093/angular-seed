@@ -1,0 +1,209 @@
+<br/>
+<div class="row responsive-table">
+    <div class="col-md-{{Math.floor(11/dataYears.length)}}"  ng-repeat="obj in dataYears">
+        <label class="check-label">
+            <input type="checkbox" class="checkbox {{obj}}" ng-change="inventorycheckbox(obj)"  ng-model="year[obj]" value="{{obj}}" />
+            &nbsp;{{obj}}</label>
+    </div>
+    <div class="col-md-1">
+        <label class="check-label">
+            <input type="checkbox" class="checkbox" ng-change="allcheckbox(all)"  ng-model="all" value="all" />
+            &nbsp;All
+        </label>
+    </div>
+</div><br/>
+<div class="row responsive-table">
+    <div class="col-md-1">
+        <div ng-hide="totalEntries === null" message="Use Angular!">
+            <span class="totalCount flash badge-2 badge-pill badge-success desktop-only" ng-style="">{{tableData.length}}</span>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="form-check" style="vertical-align: sub;">
+            <label class="radio-container">More Filters
+                <input type="radio" checked="checked" name="LiqSizeRadio" ng-model="addFilter" ng-click="filterRadio('addFilter')"/>
+                <span class="checkmark"></span>
+            </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label class="radio-container" ng-show="removeFilterFlag">Remove Filters
+                <input type="radio" checked="checked" name="LiqSizeRadio" ng-model="removeFilter" ng-click="filterRadio('removeFilter')"/>
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+    <div class="col-md-6" style="text-align:center">
+        <input type="text" class="form-control" ng-model="qq" placeholder="Search text goes here"
+            style="float:right;margin-bottom:5px;"  ng-show="!removeFilterFlag"/>
+    </div>
+</div>
+<div class="row responsive-table jumbotron" ng-show="removeFilterFlag">
+    <div class="col-md-12"><p for="">Filter list by the Date Range</p></div>
+    <div class="col-md-2">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="startDate" is-open="popup1.opened" datepicker-options="dateOptions"
+           ng-required="true" show-button-bar="false" close-text="Close" alt-input-formats="altInputFormats" ng-change="startDatePicker()" placeholder="Startdate"/>
+          <span class="input-group-btn">
+            <button type="button" class="btn date-btn" ng-click="open1()">
+                <i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+    </div>
+    <div class="col-md-2">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="endDate" is-open="popup2.opened" datepicker-options="dateOptions"
+           ng-required="true" show-button-bar="false" close-text="Close" alt-input-formats="altInputFormats" ng-change="endDatePicker()" placeholder="EndDate"/>
+          <span class="input-group-btn">
+            <button type="button" class="btn date-btn" ng-click="open2()">
+                <i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-6" style="text-align:center">
+        <input type="text" class="form-control" ng-model="qq" placeholder="Search text goes here"
+            style="float:right;margin-bottom:5px;" ng-show="removeFilterFlag"/>
+    </div>
+</div>
+
+<div class="responsive-table">
+    <div class="row row-no-margin desktop-only-no-table">
+        <div class="col">
+            <div class="row">
+                <div class="col-sm-3 inventory-header">
+                    <a href="" ng-click="sortBy('invoiceDate')">InvoiceDate</a>
+                    <span class="sortorder" ng-show="propertyName === 'invoiceDate'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-3 inventory-header">
+                    <a href="" ng-click="sortBy('invoiceNum')">InvoiceNum</a>
+                    <span class="sortorder" ng-show="propertyName === 'invoiceNum'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-4 inventory-header">
+                    <a href="" ng-click="sortBy('liqName')">LiquorName</a>
+                    <span class="sortorder" ng-show="propertyName === 'liqName'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-2 inventory-header">
+                    <a href="" ng-click="sortBy('liqSize')">Size</a>
+                    <span class="sortorder" ng-show="propertyName === 'liqSize'" ng-class="{reverse:reverse}"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-sm-4 inventory-header">
+                    <a href="" ng-click="sortBy('salesPerson')">SalesPerson</a>
+                    <span class="sortorder" ng-show="propertyName === 'salesPerson'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-2 inventory-header">
+                    <a href="" ng-click="sortBy('price')">Price</a>
+                    <span class="sortorder" ng-show="propertyName === 'price'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-2 inventory-header">
+                    <a href="" ng-click="sortBy('sellPrice')">SellingPrice</a>
+                    <span class="sortorder" ng-show="propertyName === 'sellPrice'" ng-class="{reverse:reverse}"></span>
+                </div>
+                <div class="col-sm-4 inventory-header">
+                    <a href="" ng-click="sortBy('quantity')">Quantity</a>
+                    <span class="sortorder" ng-show="propertyName === 'quantity'" ng-class="{reverse:reverse}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scrollable">
+        <div class="no-table row row-no-margin" ng-repeat="d in tableData | filter:qq | orderBy : propertyName:reverse as results track by $index" style="font-size:12px; font-weight:600;">
+            <div class="col">
+                    <div class="row">
+                        <div class="col-sm-3 no-table-col"><span class="desktop-only-no-table" style="color:#0db3d0; float:left;padding-right:10px;font-size: 7px;">{{$index+1}}. </span><label class="m-label">Date:&nbsp;</label>{{d.invoiceDate | date: 'MMM-dd-yy'}}</div>
+                        <div class="col-sm-3 no-table-col"><label class="m-label">Invoice:&nbsp;</label>{{d.invoiceNum}}</div>
+                        <div class="col-sm-4 no-table-col"><label class="m-label">Name:&nbsp;</label>{{d.liqName}}</div>
+                        <div class="col-sm-2 no-table-col"><label class="m-label">Size:&nbsp;</label>{{d.liqSize}}</div>
+                    </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-sm-4 no-table-col"><label class="m-label">Sales P:&nbsp;</label>{{d.salesPerson}}</div>
+                    <div class="col-sm-2 no-table-col"><label class="m-label">Buying:&nbsp;</label>{{d.price}}</div>
+                    <div class="col-sm-2 no-table-col"><label class="m-label">Selling:&nbsp;</label>
+                        <div ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.sellPrice}}
+                            <div class="badged" ng-hide="d.price/0.7 < d.sellPrice && d.price/0.6 > d.sellPrice"
+                                ng-style="d.price/0.7 > d.sellPrice && {'background-color': '#ed4c4c'} ||{'background-color': '#0b8203'}">
+                                {{d.sellPrice < d.price/0.7 ? (((d.sellPrice - d.price)/d.sellPrice)*100  | number : 0) : ''}}
+                                {{ d.sellPrice > d.price/0.6 ? (((d.sellPrice - d.price)/d.sellPrice)*100 | number : 0) : ''}}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-4 no-table-col"><label class="m-label">Quantity:&nbsp;</label>{{d.quantity}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br/><br/><br/>
+<!--div class="row responsive-table">
+    <div class="col-md-12 scrollable">
+        <table class="table table-bordered table-striped" >
+            <thead>
+                <tr class="">
+                    <th nowrap class="desktop-only">
+                        <a href="" ng-click="sortBy('invoiceDate')">InvoiceDate</a>
+                        <span class="sortorder" ng-show="propertyName === 'invoiceDate'" ng-class="{reverse:reverse}"></span>
+                    </th>
+                    <th nowrap class="desktop-only">
+                        <a href="" ng-click="sortBy('invoiceNum')">InvoiceNum</a>
+                        <span class="sortorder" ng-show="propertyName === 'invoiceNum'" ng-class="{reverse:reverse}"></span>
+                    </th>
+                    <th nowrap>
+                        <a href="" ng-click="sortBy('liqName')">LiquorName</a>
+                        <span class="sortorder" ng-show="propertyName === 'liqName'" ng-class="{reverse:reverse}"></span>
+                    </th>
+                    <th nowrap>
+                        <a href="" ng-click="sortBy('liqSize')">Size</a>
+                        <span class="sortorder" ng-show="propertyName === 'liqSize'" ng-class="{reverse:reverse}"></span>
+                    </th>
+                    <th nowrap class="desktop-only">
+                        <a href="" ng-click="sortBy('salesPerson')">SalesPerson</a>
+                        <span class="sortorder" ng-show="propertyName === 'salesPerson'" ng-class="{reverse:reverse}"></span>
+                    </th>
+                    <th nowrap>
+                        <a href="" ng-click="sortBy('price')">Price</a>
+                        <span class="sortorder" ng-show="propertyName === 'price'" ng-class="{reverse:reverse}"></span>
+                    </th>
+                    <th nowrap>
+                        <a href="" ng-click="sortBy('sellPrice')">SellingPrice</a>
+                        <span class="sortorder" ng-show="propertyName === 'sellPrice'" ng-class="{reverse:reverse}"></span>
+                    </th>
+                    <th nowrap class="desktop-only">
+                        <a href="" ng-click="sortBy('quantity')">Quantity</a>
+                        <span class="sortorder" ng-show="propertyName === 'quantity'" ng-class="{reverse:reverse}"></span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in responseData | filter:qq | orderBy : propertyName:reverse as results track by $index">
+                    <td nowrap style="padding-left:0;padding-right:5px;" class="desktop-only" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">
+                        <span style="color:#0db3d0; float:left;padding-right:10px;font-size: 9px;">{{$index+1}}. </span>
+                        <span style="float:right;">{{d.invoiceDate | date: 'MMM-dd-yy'}}</span>
+                    </td>
+                    <td class="desktop-only" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.invoiceNum}}</td>
+                    <td ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.liqName}}</td>
+                    <td nowrap ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.liqSize}}</td>
+                    <td nowrap class="desktop-only"ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.salesPerson}}</td>
+                    <td ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.price}}</td>
+                    <td ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.sellPrice}}
+                        <div class="badged" ng-hide="d.price/0.7 < d.sellPrice && d.price/0.6 > d.sellPrice"
+                            ng-style="d.price/0.7 > d.sellPrice && {'background-color': '#ed4c4c'} ||{'background-color': '#0b8203'}">
+                            {{d.sellPrice < d.price/0.7 ? (((d.sellPrice - d.price)/d.sellPrice)*100  | number : 0) : ''}}
+                            {{ d.sellPrice > d.price/0.6 ? (((d.sellPrice - d.price)/d.sellPrice)*100 | number : 0) : ''}}
+                        </div>
+                    </td>
+                    <td class="desktop-only" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">
+                        <span ng-style="d.quantity.length > 10 ? {'font-size':'10px'} : {'font-size':'12px'}">{{d.quantity}}</span></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div-->
+
+<hr>
+<div class="desktop-only" [hidden]="searchTerm === null">
+    <pre style="height:400px;background: aliceblue;">{{responseData |json }}</pre>
+</div>
+<br/><br/><br/>
