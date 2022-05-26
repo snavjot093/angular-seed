@@ -58,9 +58,9 @@ app.controller('InvenCtrl', ['$scope', '$http','$window', '$timeout',  '$interva
         });
     }
     $scope.propertyName = 'name';
-    $scope.reverse = false;
+    $scope.reverse = true;
     $scope.sortBy = function (propertyName) {
-        $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : true;
+        $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
         $scope.propertyName = propertyName;
     };
 

@@ -1,28 +1,28 @@
 {
-  "_from": "angular-loader@1.7.9",
-  "_id": "angular-loader@1.7.9",
+  "_from": "angular-loader@1.8.3",
+  "_id": "angular-loader@1.8.3",
   "_inBundle": false,
-  "_integrity": "sha512-Hei0AQ96P2qzduWZtAsHvxUnLSLSAxpkjYc7F0JAwNPA14rXYKt20a9crc8CWd/v45Dkz7+SFhb2QMx5nCyNLQ==",
+  "_integrity": "sha512-7Jn0hg811k5QAijcXCVCszySXTtakaNEe11MfGiZP3/eBkmSTkUc9z+DiAJ+VVmDlu+SVSF81Ahj0iXjSBQfwQ==",
   "_location": "/angular-loader",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "angular-loader@1.7.9",
+    "raw": "angular-loader@1.8.3",
     "name": "angular-loader",
     "escapedName": "angular-loader",
-    "rawSpec": "1.7.9",
+    "rawSpec": "1.8.3",
     "saveSpec": null,
-    "fetchSpec": "1.7.9"
+    "fetchSpec": "1.8.3"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/angular-loader/-/angular-loader-1.7.9.tgz",
-  "_shasum": "525c12a2e914d81345f58289fb705882430d938a",
-  "_spec": "angular-loader@1.7.9",
-  "_where": "/Users/nSingh/Documents/My-Projects/angular-seed",
+  "_resolved": "https://registry.npmjs.org/angular-loader/-/angular-loader-1.8.3.tgz",
+  "_shasum": "a4ab0dc6fbd3a59496c634b63d67c59fb15c7bcb",
+  "_spec": "angular-loader@1.8.3",
+  "_where": "/Users/M751775/Documents/Projects/angular-seed",
   "author": {
     "name": "Angular Core Team",
     "email": "angular-core+npm@google.com"
@@ -60,5 +60,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.7.9"
+  "version": "1.8.3"
 }
