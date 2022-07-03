@@ -157,6 +157,7 @@ $scope.showPaymentHistory = function(){
     $scope.totalData = [];
     $scope.tableInvtData=[];
     $scope.collectiveResponse= function(data, val){
+        debugger;
         $scope.collective=[];
         if(data !==''){
             angular.forEach(data, function(obj) {
