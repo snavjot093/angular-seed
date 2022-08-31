@@ -1185,9 +1185,9 @@
         "liqSize": "750 ml",
         "liqType": "Whiskey",
         "price": "92.50",
-        "quantity": "1 Case",
+        "quantity": "1 Case (price updated in 2022",
         "salesPerson": "Roxana - SWS",
-        "sellPrice": "134.99"
+        "sellPrice": "144.99"
     },
     {
         "$key": "Xtp0qsUWfKk5UUe0YgF4",
@@ -5640,9 +5640,9 @@
         "liqType": "Tequila",
         "salesPerson": "David - Youngs Mkt",
         "price": "11.25",
-        "quantity": "1 Case",
+        "quantity": "1 Case(19.99 price updated on aug2022)",
         "invoiceDate": 1631707200000,
-        "sellPrice": "19.99"
+        "sellPrice": "24.99"
     },
     {
         "$key": "c4EEwbNPAry3rkW73KS8",
@@ -5815,12 +5815,12 @@
     {
         "$key": "9fUecDyP18FQunGyAzzj",
         "liqSize": "375 ml",
-        "quantity": "3 Case Deal",
+        "quantity": "3 Case Deal(changed in 2022(old 34.99)",
         "liqType": "Tequila",
         "invoiceDate": 1634126400000,
         "liqName": "Remy Martin VSOP",
         "invoiceNum": "14952901",
-        "sellPrice": "34.99",
+        "sellPrice": "29.99",
         "salesPerson": "David - Youngs Mkt",
         "price": "17.25"
     },
@@ -7893,8 +7893,8 @@
         "invoiceNum": "15278293",
         "liqSize": "200ml",
         "salesPerson": "David - Youngs Mkt",
-        "sellPrice": "16.99",
-        "quantity": "1 Case",
+        "sellPrice": "17.99",
+        "quantity": "1 Case (price changed in 2022(old 16.99)",
         "liqType": "Cognac",
         "invoiceDate": 1639137600000
       },
@@ -9541,5 +9541,125 @@
     "salesPerson": "Alex - Maddalena",
     "quantity": "1 Case",
     "liqName": "Stella Rosa - Rosso"
+  },
+  {
+    "$key": "y6QaDerJD99JAk0rGi9Y",
+    "sellPrice": "5.99",
+    "invoiceDate": 1637582400000,
+    "price": "3.85",
+    "liqName": "Woodbridge - Merlot",
+    "liqType": "Wine",
+    "quantity": "2 Cases of 10C deal",
+    "liqSize": "750 ml",
+    "salesPerson": "Roxana - SWS",
+    "invoiceNum": "4053398"
+  },
+  {
+    "$key": "xnSuZgHVv9MFjJBfoiLI",
+    "liqName": "Woodbridge - Pinot Noir",
+    "liqSize": "750 ml",
+    "quantity": "2 Cases of 10C deal",
+    "price": "3.85",
+    "invoiceNum": "4053398",
+    "liqType": "Wine",
+    "invoiceDate": 1637582400000,
+    "salesPerson": "Roxana - SWS",
+    "sellPrice": "5.99"
+  },
+  {
+    "$key": "t85MW0hvbYInWDGHUXub",
+    "liqType": "Mixed Drink",
+    "liqName": "Buzzballz - Peachballz",
+    "salesPerson": "Roxana - SWS",
+    "liqSize": "200 ml",
+    "quantity": "3 Cases of 20C deal",
+    "sellPrice": "3.49",
+    "invoiceNum": "4053398",
+    "invoiceDate": 1637582400000,
+    "price": "2.34"
+  },
+  {
+    "$key": "oCyquHuoC5EWHo0BP8Rl",
+    "invoiceNum": "4053398",
+    "invoiceDate": 1637582400000,
+    "liqName": "Buzzballz - Tequila Rita",
+    "sellPrice": "3.49",
+    "salesPerson": "Roxana - SWS",
+    "price": "2.34",
+    "liqType": "Mixed Drink",
+    "liqSize": "200 ml",
+    "quantity": "5 Cases of 20C deal"
+  },
+  {
+    "$key": "Zt8Il4Rr2fjUGlZAHe8p",
+    "price": "2.34",
+    "quantity": "11 Cases of 20C deal",
+    "sellPrice": "3.49",
+    "invoiceDate": 1637582400000,
+    "liqSize": "200 ml",
+    "salesPerson": "Roxana - SWS",
+    "liqName": "Buzzballz - Choc Tease",
+    "invoiceNum": "4053398",
+    "liqType": "Mixed Drink"
+  },
+  {
+    "$key": "ZIyHy83bU6RfhR9cOQtE",
+    "liqType": "Mixed Drink",
+    "invoiceNum": "4053398",
+    "liqSize": "200 ml",
+    "price": "2.34",
+    "invoiceDate": 1637582400000,
+    "liqName": "Buzzballz - Strawberry Margarita",
+    "salesPerson": "Roxana - SWS",
+    "quantity": "2 Cases of 20C deal",
+    "sellPrice": "3.49"
+  },
+  {
+    "$key": "WvRQhyUSQa2vDEttaFUV",
+    "invoiceNum": "4053398",
+    "sellPrice": "5.99",
+    "liqSize": "750 ml",
+    "liqName": "Woodbridge - Cabernet",
+    "salesPerson": "Roxana - SWS",
+    "quantity": "2 Cases of 10C deal",
+    "price": "3.85",
+    "liqType": "Wine",
+    "invoiceDate": 1637582400000
+  },
+  {
+    "$key": "7YFX3XCRWd7LYQ5zAhrR",
+    "liqSize": "200 ml",
+    "invoiceDate": 1637582400000,
+    "liqType": "Mixed Drink",
+    "invoiceNum": "4053398",
+    "price": "2.34",
+    "quantity": "2 Cases of 20C deal",
+    "sellPrice": "3.49",
+    "salesPerson": "Roxana - SWS",
+    "liqName": "Buzzballz - Watermelon Smash"
+  },
+  {
+    "$key": "4iIZaDSMPJta9LDQtuqe",
+    "liqType": "Mixed Drink",
+    "salesPerson": "Roxana - SWS",
+    "invoiceNum": "4053398",
+    "liqName": "Buzzballz - Forbidden Apple",
+    "invoiceDate": 1637582400000,
+    "liqSize": "200 ml",
+    "quantity": "11 Cases of 20C deal",
+    "sellPrice": "3.49",
+    "price": "2.34"
+  },
+  {
+    "$key": "2dJEYFMwhraywe4UNfCq",
+    "invoiceDate": 1637582400000,
+    "invoiceNum": "4053398",
+    "sellPrice": "5.99",
+    "price": "3.85",
+    "quantity": "2 Cases of 10C deal",
+    "liqSize": "750 ml",
+    "salesPerson": "Roxana - SWS",
+    "liqType": "Wine",
+    "liqName": "Woodbridge - Chardonnay"
   }
 ]

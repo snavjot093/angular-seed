@@ -5891,9 +5891,9 @@
     "liqSize": "750 ml",
     "liqType": "Whiskey",
     "price": "59.83",
-    "quantity": "1 Case",
+    "quantity": "1 Case (price updated in 2022)",
     "salesPerson": "Jesse - SWS",
-    "sellPrice": "89.99"
+    "sellPrice": "95.99"
   },
   {
     "$key": "MLQrwhxfABBOVAmq6sSf",
@@ -11933,7 +11933,7 @@
     "price": "43.10",
     "quantity": "1 Case of 5C +1C of sailor Jerry 750ml",
     "salesPerson": "David - Youngs Mkt",
-    "sellPrice": "63.99"
+    "sellPrice": "64.99"
   },
   {
     "$key": "ZIMJztsnQV4liYR0g267",
@@ -11956,9 +11956,9 @@
     "liqSize": "750 ml",
     "liqType": "Whiskey",
     "price": "70.70",
-    "quantity": "2 Cases of 5C +1C of sailor Jerry 750ml",
+    "quantity": "2 Cases of 5C +1C of sailor Jerry 750ml(price changed in 2022 from 99.99)",
     "salesPerson": "David - Youngs Mkt",
-    "sellPrice": "99.99"
+    "sellPrice": "119.99"
   },
   {
     "$key": "kLSnWNrgL6rP0UPcgynE",

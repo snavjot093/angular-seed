@@ -7736,9 +7736,9 @@
     "liqSize": "100 ml",
     "liqType": "Cognac",
     "price": "5.75",
-    "quantity": "1 Case",
+    "quantity": "1 Case price changed 2022(old 7.99)",
     "salesPerson": "David - Youngs Mkt",
-    "sellPrice": "7.99"
+    "sellPrice": "9.99"
   },
   {
     "$key": "RLmopWyNBW74EJVDNXt9",
@@ -9951,9 +9951,9 @@
     "liqSize": "750 ml",
     "liqType": "Cognac",
     "price": "34.87",
-    "quantity": "10 Cases of Gift packs",
+    "quantity": "10 Cases of Gift packs Price changed in 2022(old 49.99)",
     "salesPerson": "David - Youngs Mkt",
-    "sellPrice": "49.99"
+    "sellPrice": "54.99"
   },
   {
     "$key": "8flTjClbg8iq6W5gMS0c",
