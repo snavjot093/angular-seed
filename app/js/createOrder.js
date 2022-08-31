@@ -16,14 +16,14 @@ app.controller('CreateOrderCtrl', ['$scope', '$http','$window', '$timeout',  '$i
         //console.log(error);
         $scope.errorHandler(error);
     });
-    var getInventoryPromise = stbsService.getInventory();
+    /*var getInventoryPromise = stbsService.getInventory();
         getInventoryPromise.then(function(data) {
             $scope.allMyLiquor= data;
             console.log(data);
         },function(error) {
             console.log(error);
             $scope.errorHandler(error);
-        });
+        });*/
         $scope.checkboxed = function(item, name, val){
         console.log(name);
         console.log(val);
@@ -86,6 +86,31 @@ app.controller('CreateOrderCtrl', ['$scope', '$http','$window', '$timeout',  '$i
             $scope.propertyName = propertyName;
         };
         console.log($scope.masterPrice);
+    }
+//============================  INVENTORY CALL  ========================================
+
+    $scope.invtCall= function(val){
+        $scope.totalData = [];
+        $scope.tableInvtData=[];
+        $scope.collective=[];
+        var getInventoryPromise = stbsService.getListInventory(val);
+        getInventoryPromise.then(function(data) {
+            if(data !==''){
+                $scope.totalData.push(data);
+                $scope.tableInvtData = $scope.totalData.flat();
+            }else{
+                $scope.tableInvtData ='';
+            }
+            $scope.allMyLiquor = $scope.tableInvtData;
+        },function(error) {
+            console.log(error);
+            $scope.errorHandler(error);
+        });
+    };
+    var date = new Date();
+    var inceptionYear = 2018;
+    for(var i = inceptionYear; i <= date.getFullYear(); i++){
+        $scope.invtCall(i);
     }
 
 }]);

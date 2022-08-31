@@ -17,29 +17,29 @@ app.controller('ReportCtrl', ['$scope', '$http','$window', '$timeout',  '$interv
     $scope.open2 = false;
     $scope.totalEntries = null;
 
-                                                                                var liqNamePromise = stbsService.getLiquorName();
-                                                                                liqNamePromise.then(function(data) {
-                                                                                    $scope.liquorNameResponse = data;
-                                                                                },function(error) {
-                                                                                    //console.log(error);
-                                                                                    $scope.errorHandler(error);
-                                                                                });
-                                                                                var liqSizePromise = stbsService.getLiquorSize();
-                                                                                liqSizePromise.then(function(data) {
-                                                                                    $scope.liqSizeResp = data;
-                                                                                    //console.log(data)
-                                                                                },function(error) {
-                                                                                    //console.log(error);
-                                                                                    $scope.errorHandler(error);
-                                                                                });
-                                                                                var liqTypePromise = stbsService.getLiquorType();
-                                                                                liqTypePromise.then(function(data) {
-                                                                                    //console.log(data)
-                                                                                },function(error) {
-                                                                                    //console.log(error);
-                                                                                    $scope.errorHandler(error);
-                                                                                });
-    $scope.showPaymentHistory = function(){
+    var liqNamePromise = stbsService.getLiquorName();
+    liqNamePromise.then(function(data) {
+        $scope.liquorNameResponse = data;
+    },function(error) {
+        //console.log(error);
+        $scope.errorHandler(error);
+    });
+    var liqSizePromise = stbsService.getLiquorSize();
+    liqSizePromise.then(function(data) {
+        $scope.liqSizeResp = data;
+        //console.log(data)
+    },function(error) {
+        //console.log(error);
+        $scope.errorHandler(error);
+    });
+    var liqTypePromise = stbsService.getLiquorType();
+    liqTypePromise.then(function(data) {
+        //console.log(data)
+    },function(error) {
+        //console.log(error);
+        $scope.errorHandler(error);
+    });
+$scope.showPaymentHistory = function(){
         var getPhPromise = stbsService.getPaymentHistory();
             getPhPromise.then(function(data) {
                 $scope.responseData = data;
@@ -141,9 +141,81 @@ app.controller('ReportCtrl', ['$scope', '$http','$window', '$timeout',  '$interv
 
     }
     $scope.propertyName = 'invoiceDate';
-    $scope.reverse = false;
+    $scope.reverse = true;
     $scope.sortBy = function (propertyName) {
-        $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : true;
+        $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
         $scope.propertyName = propertyName;
     };
+
+//============================================
+//============================================
+  
+    var date = new Date();
+    var inceptionYear = 2018;
+    $scope.currentYear = date.getFullYear();
+    
+    $scope.totalData = [];
+    $scope.tableInvtData=[];
+    $scope.collectiveResponse= function(data, val){
+        debugger;
+        $scope.collective=[];
+        if(data !==''){
+            angular.forEach(data, function(obj) {
+                if(obj.liqName.toLowerCase() === val.toLowerCase()){
+                    $scope.collective.push(obj);
+                }
+            });
+            $scope.cleanupResponse($scope.collective);
+        }
+        
+        if($scope.collective.length< 5){
+            if($scope.currentYear > 2018){
+                    $scope.currentYear = $scope.currentYear-1;
+                    console.log($scope.currentYear);
+                    $scope.invtCall(val);
+            }
+                
+            }
+    };
+    $scope.cleanupResponse = function(datam){
+        $scope.liqSizeBulk =[];
+        $scope.liquorReportByName =[];
+        $scope.responseData = null; //to empty the table in UI
+        $scope.liqSizeForRadio = null;
+        angular.forEach(datam, function(obj) {
+            $scope.liquorReportByName.push(obj);
+            $scope.liqSizeBulk.push(obj.liqSize);
+        });
+// to get the sizes of the Liquour from the total reponse'
+        $scope.liqSizeForRadio = $scope.liqSizeBulk.filter((v, i, a) => a.indexOf(v) === i); // filtered out the liquorSize multiple entires.
+        if($scope.liqSizeForRadio.length > 1){
+            $scope.liqSizeForRadio.push('All')
+        }
+    }
+    $scope.invtCall= function(val){
+        var getInventoryPromise = stbsService.getListInventory($scope.currentYear);
+        getInventoryPromise.then(function(data) {
+            if(data !==''){
+                $scope.totalData.push(data);
+                $scope.tableInvtData = $scope.totalData.flat();
+            }else{
+                $scope.tableInvtData ='';
+            }
+            $scope.collectiveResponse($scope.tableInvtData, val);
+        },function(error) {
+            console.log(error);
+            $scope.errorHandler(error);
+        });
+    };
+
+    $scope.inventorycheckbox = function(val){
+        $scope.currentYear = date.getFullYear();
+        $scope.totalData = [];
+        $scope.tableInvtData=[];
+        $scope.collective=[];
+        $scope.liqSizeForRadio = null;
+        $scope.invtCall(val);
+    }
+
+
 }]);
