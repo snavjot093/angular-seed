@@ -71,10 +71,11 @@
             <div class="col-md-12 scrollable">
                 <table  class="createOrder-table table-bordered table-striped">
                     <tr ng-repeat=" x in liquorNameResponse |filter:searchTerm">
-                        <td><span>{{ x }}</span></td>
+                        <td style="width:280px;"><span>{{ x }}</span></td>
                         <td><label><input type="checkbox" ng-change="checkboxed(x+' - 12oz', x,'12 oz')" ng-model="m12[x]" />&nbsp;12Oz</label></td>
                         <td><label><input type="checkbox" ng-change="checkboxed(x+' - 50ml', x,'50 ml')" ng-model="m50[x]" />&nbsp;50ml</label></td>
                         <td><label><input type="checkbox" ng-change="checkboxed(x+' - 100ml', x,'100 ml')" ng-model="m100[x]"/>&nbsp;100ml</label></td>
+                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 187ml', x,'187 ml')" ng-model="m187[x]"/>&nbsp;187ml</label></td>
                         <td><label><input type="checkbox" ng-change="checkboxed(x+' - 200ml', x,'200 ml')" ng-model="m200[x]"/>&nbsp;200ml </label></td>
                         <td><label><input type="checkbox" ng-change="checkboxed(x+' - 375ml', x,'375 ml')" ng-model="m375[x]"/>&nbsp;375ml </label></td>
                         <td><label><input type="checkbox" ng-change="checkboxed(x+' - 500ml', x,'500 ml')" ng-model="m500[x]"/>&nbsp;500ml </label></td>

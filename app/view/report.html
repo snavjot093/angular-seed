@@ -26,7 +26,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="liqName"> Buying report of Liquor</label>
-                                        <select id="liqName"class="form-control" ng-model="liquorName" ng-change="selectLiquorName(liquorName)"  placeholder="Liquor Name">
+                                        <!--==select id="liqName"class="form-control" ng-model="liquorName" ng-change="selectLiquorName(liquorName)"  placeholder="Liquor Name"-->
+                                            <select id="liqName"class="form-control" ng-model="liquorName" ng-change="inventorycheckbox(liquorName)"  placeholder="Liquor Name">
                                             <option value=""  ng-selected="$first">Liquor Name</option>
                                             <option ng-repeat="obj in liquorNameResponse" value="{{obj}}">{{obj}}</option>
                                         </select>
@@ -102,7 +103,7 @@
                                     <a href="javascript:void(0)" ng-click="sortBy('company')" >Company</a>
                                     <span class="sortorder" ng-show="propertyName === 'company'" ng-class="{reverse:reverse}"></span>
                                 </th>
-                                <th class="desktop-only" ng-show="pHistory">
+                                <th class="desktop-only" ng-show="pHistory" nowrap>
                                     <a href="javascript:void(0)" ng-click="sortBy('dueDate')">Due Date</a>
                                     <span class="sortorder" ng-show="propertyName === 'dueDate'" ng-class="{reverse:reverse}"></span>
                                 </th>
@@ -137,7 +138,7 @@
                                 <td nowrap ng-show="rByLName" class="desktop-only" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">
                                     <span ng-style="d.quantity.length > 10 ? {'font-size':'10px'} : {'font-size':'12px'}">{{d.quantity}}</span></td>
                                 <td nowrap ng-style="d.paidWith !== '' ? {'color':'green'} : {'color':'red'}" ng-show="pHistory">{{d.company}}</td>
-                                <td ng-style="d.paidWith !== '' ? {'color':'green'} : {'color':'red'}" ng-show="pHistory">{{d.dueDate | date: 'MMM-dd-yy'}}</td>
+                                <td nowrap ng-style="d.paidWith !== '' ? {'color':'green'} : {'color':'red'}" ng-show="pHistory">{{d.dueDate | date: 'MMM-dd-yy'}}</td>
                                 <td ng-style="d.paidWith !== '' ? {'color':'green'} : {'color':'red'}" ng-show="pHistory">{{d.amount}}</td>
                                 <td ng-style="d.paidWith !== '' ? {'color':'green'} : {'color':'red'}" ng-show="pHistory">{{d.paidWith}}</td>
                                 <!--td><pre>{{d|json}}</pre></td-->
