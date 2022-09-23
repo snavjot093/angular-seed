@@ -39,16 +39,16 @@ app.controller('ReportCtrl', ['$scope', '$http','$window', '$timeout',  '$interv
         //console.log(error);
         $scope.errorHandler(error);
     });
-$scope.showPaymentHistory = function(){
-        var getPhPromise = stbsService.getPaymentHistory();
-            getPhPromise.then(function(data) {
-                $scope.responseData = data;
-                $scope.totalEntries = $scope.responseData.length;
-            },function(error) {
-                console.log(error);
-                $scope.errorHandler(error);
-            });
-    };
+/*$scope.showPaymentHistory = function(){
+    var getPhPromise = stbsService.getPaymentHistory();
+        getPhPromise.then(function(data) {
+            $scope.responseData = data;
+            $scope.totalEntries = $scope.responseData.length;
+        },function(error) {
+            console.log(error);
+            $scope.errorHandler(error);
+        });
+};*/
     $scope.selectLiquorName = function(name){
 
         $scope.responseData = null; //to empty the table in UI
@@ -90,7 +90,7 @@ $scope.showPaymentHistory = function(){
             $scope.totalEntries = $scope.responseData.length;
         });
     };
-    $scope.sideNav = function(){
+    /*$scope.sideNav = function(){
         $scope.toggleSlide = !$scope.toggleSlide;
         $scope.open1 = !$scope.open1;
         $scope.open2 = !$scope.open2;
@@ -102,7 +102,7 @@ $scope.showPaymentHistory = function(){
             angular.element(".sideNav-drawer-content").css('width','100%');
              angular.element(".sideNav-drawer-content").css('margin-left','0px');
         }
-    };
+    };*/
     $scope.showAndHideTabs = function(text){
         if(text ==='reportByLiquorName'){
             $scope.pageTitle = 'Search Liquor By Name';
@@ -140,6 +140,7 @@ $scope.showPaymentHistory = function(){
         }
 
     }
+    $scope.showAndHideTabs('reportByLiquorName');
     $scope.propertyName = 'invoiceDate';
     $scope.reverse = true;
     $scope.sortBy = function (propertyName) {
@@ -157,7 +158,6 @@ $scope.showPaymentHistory = function(){
     $scope.totalData = [];
     $scope.tableInvtData=[];
     $scope.collectiveResponse= function(data, val){
-        debugger;
         $scope.collective=[];
         if(data !==''){
             angular.forEach(data, function(obj) {
@@ -167,15 +167,13 @@ $scope.showPaymentHistory = function(){
             });
             $scope.cleanupResponse($scope.collective);
         }
-        
-        if($scope.collective.length< 5){
+        if($scope.collective.length< 15){
             if($scope.currentYear > 2018){
-                    $scope.currentYear = $scope.currentYear-1;
-                    console.log($scope.currentYear);
-                    $scope.invtCall(val);
+                $scope.currentYear = $scope.currentYear-1;
+                console.log($scope.currentYear);
+                $scope.invtCall(val);
             }
-                
-            }
+        }
     };
     $scope.cleanupResponse = function(datam){
         $scope.liqSizeBulk =[];
