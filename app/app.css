@@ -1,5 +1,44 @@
 @import url("./asset/bootstrap-icons.css");
+/*==============REPORTS======================*/
 
+.exp1.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header  header header header'
+        'menu main main main main  main main right'
+        'footer footer footer footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: #0078B3;
+    padding: 10px;
+}
+.exp2.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #F36C0D;
+    padding: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(402px, 1fr));
+    /*grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));*/
+    grid-gap: 1rem;
+}
+.grid-container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+}
+.grid-item {
+      background-color: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+}
+.area1 { grid-area: header; }
+.area2 { grid-area: menu; }
+.area3 { grid-area: main;}
+.area4 { grid-area: right; }
+.area5 { grid-area: footer; }
+/*==============REPORTS======================*/
 /*=================INDEX PAGE===================*/
 .container-fluid {
   margin-top: 50px;

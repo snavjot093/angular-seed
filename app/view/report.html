@@ -16,6 +16,25 @@
             Side Nav
             <span class="arrow-inBtn" ng-show="open2">&#8811;</span>
         </button-->
+        <!--div class="grid-container exp1">
+            <div class="area1">Header</div>
+            <div class="area2">Menu</div>
+            <div class="area3">
+                <div class="grid-container exp2">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                    <div class="grid-item">7</div>
+                    <div class="grid-item">8</div>
+                    <div class="grid-item">9</div>
+                </div>
+            </div>
+            <div class="area4">Right</div>
+            <div class="area5">Footer</div>
+      </div-->
         <div>
             <h2 class="page-title">{{pageTitle}}</h2>
             <div class="row" ng-hide="byLiquorNameUI">
@@ -128,11 +147,17 @@
                                 <td nowrap ng-show="rByLName" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.liqSize}}</td>
                                 <td nowrap ng-show="rByLName" class="desktop-only"ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.salesPerson}}</td>
                                 <td nowrap ng-show="rByLName" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.price}}</td>
-                                <td nowrap nowrap ng-show="rByLName" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.sellPrice}}
+                                <td nowrap nowrap ng-show="rByLName" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}"><!--{{d.sellPrice}}
                                     <div class="badged" ng-hide="d.price/0.7 < d.sellPrice && d.price/0.6 > d.sellPrice"
                                         ng-style="d.price/0.7 > d.sellPrice && {'background-color': '#ed4c4c'} ||{'background-color': '#0b8203'}">
                                         {{d.sellPrice < d.price/0.7 ? (((d.sellPrice - d.price)/d.sellPrice)*100  | number : 0) : ''}}
                                         {{ d.sellPrice > d.price/0.6 ? (((d.sellPrice - d.price)/d.sellPrice)*100 | number : 0) : ''}}
+                                    </div-->
+                                    <div ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.sellPrice}}
+                                        <div class="badged" ng-style="d.price/0.7 > d.sellPrice && {'background-color': '#ed4c4c'} ||{'background-color': '#0b8203'}">
+                                            {{((d.sellPrice - d.price)/d.sellPrice)*100  | number:0 }}
+                                           
+                                        </div>
                                     </div>
                                 </td>
                                 <td nowrap ng-show="rByLName" class="desktop-only" ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">

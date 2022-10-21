@@ -123,10 +123,9 @@
                     <div class="col-sm-2 no-table-col"><label class="m-label">Buying:&nbsp;</label>{{d.price}}</div>
                     <div class="col-sm-2 no-table-col"><label class="m-label">Selling:&nbsp;</label>
                         <div ng-style="d.price/0.7 > d.sellPrice && {'color':'red'} || {'color': 'black'} && d.price/0.6 < d.sellPrice && {'color':'green'} || {'color': 'black'}">{{d.sellPrice}}
-                            <div class="badged" ng-hide="d.price/0.7 < d.sellPrice && d.price/0.6 > d.sellPrice"
-                                ng-style="d.price/0.7 > d.sellPrice && {'background-color': '#ed4c4c'} ||{'background-color': '#0b8203'}">
-                                {{d.sellPrice < d.price/0.7 ? (((d.sellPrice - d.price)/d.sellPrice)*100  | number : 0) : ''}}
-                                {{ d.sellPrice > d.price/0.6 ? (((d.sellPrice - d.price)/d.sellPrice)*100 | number : 0) : ''}}
+                            <div class="badged" ng-style="d.price/0.7 > d.sellPrice && {'background-color': '#ed4c4c'} ||{'background-color': '#0b8203'}">
+                                {{((d.sellPrice - d.price)/d.sellPrice)*100  | number:0 }}
+                               
                             </div>
                         </div>
 
