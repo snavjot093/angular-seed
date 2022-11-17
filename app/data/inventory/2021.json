@@ -6407,7 +6407,7 @@
         "invoiceNum": "15102282",
         "liqSize": "750 ml",
         "invoiceDate": 1636545600000,
-        "sellPrice": "39.99",
+        "sellPrice": "38.99",
         "liqName": "Bumbu XO",
         "salesPerson": "David - Youngs Mkt",
         "liqType": "Rum"
@@ -6426,7 +6426,7 @@
     },
     {
         "$key": "3wpUmjJMzwQlVaopAJwB",
-        "sellPrice": "39.99",
+        "sellPrice": "38.99",
         "salesPerson": "David - Youngs Mkt",
         "liqName": "Bumbu XO",
         "price": "25.83",
@@ -8654,7 +8654,7 @@
     "salesPerson": "David - Youngs Mkt",
     "invoiceNum": "15324915",
     "liqType": "Bourbon",
-    "liqName": "Brothers Bond",
+    "liqName": "Brother's Bond",
     "liqSize": "750 ml",
     "quantity": "1 Case"
   },
