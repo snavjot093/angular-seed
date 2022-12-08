@@ -11712,9 +11712,9 @@
     "liqSize": "750 ml",
     "liqType": "Whiskey",
     "price": "51.00",
-    "quantity": "1 Case",
+    "quantity": "1 Case (price updated in Oct2022 from 72.99)",
     "salesPerson": "David - Youngs Mkt",
-    "sellPrice": "72.99"
+    "sellPrice": "87.99"
   },
   {
     "$key": "qjDSqWIEQbFKeh3jK7sN",
@@ -14749,9 +14749,9 @@
     "liqSize": "750 ml",
     "liqType": "Whiskey",
     "price": "225.00",
-    "quantity": "1 Case (Price changed 399.99 in 2021)",
+    "quantity": "1 Case (Price changed in Oct2022 from 369.99 )",
     "salesPerson": "David - Youngs Mkt",
-    "sellPrice": "349.99"
+    "sellPrice": "599.99"
   },
   {
     "$key": "0DzwDMHiCGkmjCLoU7P9",

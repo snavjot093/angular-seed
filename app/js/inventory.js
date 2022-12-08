@@ -13,12 +13,9 @@ app.controller('InvenCtrl', ['$scope', '$http','$window', '$timeout',  '$interva
     $scope.totalData = [];
     var callYears = []
     $scope.inventorycheckbox = function(val){
-        if($scope.allFlag =  false){
-
-        }
-        else{
-
-        }
+        debugger;
+        if($scope.allFlag =  false){ }
+        else{ }
         if(callYears.includes(val)){
             var idx = callYears.indexOf(val);
             if (idx >= 0) {
@@ -42,6 +39,7 @@ app.controller('InvenCtrl', ['$scope', '$http','$window', '$timeout',  '$interva
         }
     };
     $scope.allcheckbox = function(){
+        debugger;
         $scope.allFlag =  true;
         angular.forEach($scope.dataYears, function(value, key){
             angular.element('.'+value)[0].checked = false;
@@ -57,7 +55,7 @@ app.controller('InvenCtrl', ['$scope', '$http','$window', '$timeout',  '$interva
             $scope.inventorycheckbox(val);
         });
     }
-    $scope.propertyName = 'name';
+    $scope.propertyName = 'invoiceDate';
     $scope.reverse = true;
     $scope.sortBy = function (propertyName) {
         $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;

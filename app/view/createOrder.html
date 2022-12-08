@@ -72,19 +72,20 @@
                 <table  class="createOrder-table table-bordered table-striped">
                     <tr ng-repeat=" x in liquorNameResponse |filter:searchTerm">
                         <td style="width:280px;"><span>{{ x }}</span></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 12oz', x,'12 oz')" ng-model="m12[x]" />&nbsp;12Oz</label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 50ml', x,'50 ml')" ng-model="m50[x]" />&nbsp;50ml</label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 100ml', x,'100 ml')" ng-model="m100[x]"/>&nbsp;100ml</label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 187ml', x,'187 ml')" ng-model="m187[x]"/>&nbsp;187ml</label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 200ml', x,'200 ml')" ng-model="m200[x]"/>&nbsp;200ml </label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 375ml', x,'375 ml')" ng-model="m375[x]"/>&nbsp;375ml </label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 500ml', x,'500 ml')" ng-model="m500[x]"/>&nbsp;500ml </label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 750ml', x,'750 ml')" ng-model="m750[x]"/>&nbsp;750ml </label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 1Lt', x,'1 Liter')" ng-model="lt1[x]"/>&nbsp;1Lt </label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 1.5Lt',x ,'1.5 Liter')" ng-model="lt15[x]"/>&nbsp;1.5Lt</label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 1.75Lt',x ,'1.75 Liter')" ng-model="lt175[x]"/>&nbsp;1.75Lt </label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 3Lt',x ,'3 Liter')" ng-model="lt13[x]"/>&nbsp;3Lt </label></td>
-                        <td><label><input type="checkbox" ng-change="checkboxed(x+' - 5Lt',x ,'5 Liter')" ng-model="lt5[x]"/>&nbsp;5Lt </label></td>
+                        <td><label class="create-label"><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 12oz', x,'12 oz')" ng-model="m12[x]" />&nbsp;12Oz</label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 50ml', x,'50 ml')" ng-model="m50[x]" />&nbsp;50ml</label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 100ml', x,'100 ml')" ng-model="m100[x]"/>&nbsp;100ml</label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 187ml', x,'187 ml')" ng-model="m187[x]"/>&nbsp;187ml</label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 200ml', x,'200 ml')" ng-model="m200[x]"/>&nbsp;200ml </label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 355ml', x,'355 ml')" ng-model="m355[x]"/>&nbsp;355ml </label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 375ml', x,'375 ml')" ng-model="m375[x]"/>&nbsp;375ml </label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 500ml', x,'500 ml')" ng-model="m500[x]"/>&nbsp;500ml </label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 750ml', x,'750 ml')" ng-model="m750[x]"/>&nbsp;750ml </label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 1Lt', x,'1 Liter')" ng-model="lt1[x]"/>&nbsp;1Lt </label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 1.5Lt',x ,'1.5 Liter')" ng-model="lt15[x]"/>&nbsp;1.5Lt</label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 1.75Lt',x ,'1.75 Liter')" ng-model="lt175[x]"/>&nbsp;1.75Lt </label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 3Lt',x ,'3 Liter')" ng-model="lt13[x]"/>&nbsp;3Lt </label></td>
+                        <td><label><input class="create-input" type="checkbox" ng-change="checkboxed(x+' - 5Lt',x ,'5 Liter')" ng-model="lt5[x]"/>&nbsp;5Lt </label></td>
                     </tr>
                 </table>
             </div>
