@@ -626,7 +626,7 @@
     "$key": "QzGMxxBTdTIqakZrQ2UQ",
     "invoiceDate": 1578556800000,
     "invoiceNum": "3061959",
-    "liqName": "Clicquot Yellow Label Brut",
+    "liqName": "Veuve Clicquot Brut",
     "liqSize": "750 ml",
     "liqType": "Champagne",
     "price": "48.08",
@@ -15205,7 +15205,7 @@
     "price": "69.25",
     "quantity": "3 Bottles",
     "salesPerson": "Roxana - SWS",
-    "sellPrice": "99.99"
+    "sellPrice": "109.99"
   },
   {
     "$key": "LAoIC65bcTrmxvSNRRu3",
@@ -16740,13 +16740,13 @@
     "$key": "eDaJ0ph5gGuFOa4ZoZJJ",
     "invoiceDate": 1607414400000,
     "invoiceNum": "3487809",
-    "liqName": "Clicquot Yellow Label Brut",
+    "liqName": "Veuve Clicquot Brut",
     "liqSize": "750 ml",
     "liqType": "Champagne",
     "price": "47.83",
     "quantity": "3 Case Deal",
     "salesPerson": "Jesse - SWS",
-    "sellPrice": "68.99"
+    "sellPrice": "69.99"
   },
   {
     "$key": "fbqlkgsUnHkqJqvIEeO2",
@@ -17344,7 +17344,7 @@
     "invoiceDate": 1608624000000,
     "invoiceNum": "3506892",
     "liqName": "Seagram 7",
-    "liqSize": "375 ml",
+    "liqSize": "750 ml",
     "liqType": "Whiskey",
     "price": "8.75",
     "quantity": "2 Cases",

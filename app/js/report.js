@@ -81,8 +81,7 @@ app.controller('ReportCtrl', ['$scope', '$http','$window', '$timeout',  '$interv
         angular.forEach($scope.liquorReportByName, function(obj, key){
             if(rSize === 'All'){
                 $scope.responseData.push(obj);
-                $scope.propertyName = 'invoiceDate';
-                $scope.reverse = false;
+                $scope.sortBy('invoiceDate')
             }
             else if(obj.liqSize === rSize){
                 $scope.responseData.push(obj);
@@ -167,7 +166,7 @@ app.controller('ReportCtrl', ['$scope', '$http','$window', '$timeout',  '$interv
             });
             $scope.cleanupResponse($scope.collective);
         }
-        if($scope.collective.length< 15){
+        if($scope.collective.length< 30){
             if($scope.currentYear > 2018){
                 $scope.currentYear = $scope.currentYear-1;
                 console.log($scope.currentYear);
@@ -214,6 +213,27 @@ app.controller('ReportCtrl', ['$scope', '$http','$window', '$timeout',  '$interv
         $scope.liqSizeForRadio = null;
         $scope.invtCall(val);
     }
+    $(window).scroll(function(){
+        var myElem = angular.element(document.querySelector('#searchTerm'));
+        var scroll =  $(window).scrollTop();
+        if(scroll >500 || scroll === undefined){
+            myElem.addClass('fixed-now')
+        }else{
+            myElem.removeClass('fixed-now')
+        }
+        $scope.$apply();
+    });
 
 
 }]);
+
+app.directive("scroll",function($window){
+    return function(scope,element,attrs){
+        angular.element($window).bind("scroll",function(){
+            if(this.pageYOffset >=100){
+
+            }
+            scope.$apply();
+        })
+    }
+})
