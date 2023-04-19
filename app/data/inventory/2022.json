@@ -776,7 +776,7 @@
       {
         "$key": "skREFJUmNWR9xkOdWS74",
         "liqSize": "50 ml",
-        "liqName": "Smirnoff Blue",
+        "liqName": "Smirnoff - Blue",
         "invoiceDate": 1642593600000,
         "quantity": "2 Cases",
         "invoiceNum": "4153328",
@@ -790,7 +790,7 @@
         "key": "pXUUSK7OvsX1ALWQPtyf",
         "invoiceNum": "4153328",
         "quantity": "2 Cases",
-        "liqName": "Smirnoff Red",
+        "liqName": "Smirnoff - Red",
         "price": "5.19",
         "sellPrice": "8.99",
         "salesPerson": "Jesse - SWS",
@@ -815,7 +815,7 @@
         "$key": "ju6W2S9AwGSANviQHi7T",
         "invoiceNum": "4153328",
         "invoiceDate": 1642593600000,
-        "liqName": "Smirnoff Blue",
+        "liqName": "Smirnoff - Blue",
         "liqSize": "200 ml",
         "quantity": "3 Cases",
         "liqType": "Vodka",
@@ -837,7 +837,7 @@
       },
       {
         "$key": "aJNeGoLLqAUEfTPL6mOW",
-        "liqName": "Smirnoff Red",
+        "liqName": "Smirnoff - Red",
         "price": "1.10",
         "quantity": "1 Case",
         "invoiceNum": "4153328",
@@ -903,7 +903,7 @@
         "invoiceNum": "4153328",
         "sellPrice": "9.99",
         "salesPerson": "Jesse - SWS",
-        "liqName": "Smirnoff Blue",
+        "liqName": "Smirnoff - Blue",
         "liqType": "Vodka",
         "price": "6.50",
         "invoiceDate": 1642593600000,
@@ -924,7 +924,7 @@
       {
         "$key": "EJs0HP1Mqn3n2uNgXkxy",
         "invoiceDate": 1642593600000,
-        "liqName": "Smirnoff Red",
+        "liqName": "Smirnoff - Red",
         "liqSize": "200 ml",
         "sellPrice": "5.49",
         "salesPerson": "Jesse - SWS",
@@ -2818,7 +2818,7 @@
         "liqType": "Tequila",
         "liqSize": "750 ml",
         "invoiceNum": "15712811",
-        "sellPrice": "30.99",
+        "sellPrice": "31.99",
         "quantity": "3 Cases of 5C+1C",
         "invoiceDate": 1646827200000,
         "price": "17.74",
@@ -3657,7 +3657,7 @@
       },
       {
         "$key": "STR1d0vsacKYB0JQwDQJ",
-        "liqName": "Smirnoff Red",
+        "liqName": "Smirnoff - Red",
         "liqSize": "375 ml",
         "salesPerson": "Jesse - SWS",
         "liqType": "Vodka",
@@ -3696,7 +3696,7 @@
         "$key": "NP5RdbSdx9AtySXERj2M",
         "price": "16.47",
         "invoiceDate": 1648728000000,
-        "liqName": "Smirnoff Red",
+        "liqName": "Smirnoff - Red",
         "liqSize": "1.75 Liter",
         "sellPrice": "26.99",
         "liqType": "Vodka",
@@ -4556,7 +4556,7 @@
         "liqSize": "750 ml",
         "salesPerson": "Jesse - SWS",
         "invoiceNum": "4344418",
-        "liqName": "Smirnoff Red"
+        "liqName": "Smirnoff - Red"
       },
       {
         "$key": "xZe1Co2ocKVvh0TITynN",
@@ -5062,7 +5062,7 @@
         "quantity": "5 Cases",
         "invoiceDate": 1654603200000,
         "salesPerson": "Jesse - SWS",
-        "liqName": "Smirnoff Red"
+        "liqName": "Smirnoff - Red"
       },
       {
         "$key": "MxiOLNHIuJkMk1lZFScE",
@@ -5296,7 +5296,7 @@
       },
       {
         "$key": "y4KxOA45jeBqWnL4gUSS",
-        "liqName": "Smirnoff Red",
+        "liqName": "Smirnoff - Red",
         "invoiceNum": "4240371",
         "price": "9.00",
         "liqType": "Vodka",
@@ -5316,7 +5316,7 @@
         "quantity": "2 Cases",
         "invoiceNum": "4240371",
         "liqType": "Vodka",
-        "liqName": "Smirnoff Red"
+        "liqName": "Smirnoff - Red"
       },
       {
         "$key": "ZwvntKfBTyfbXiV3tunQ",
@@ -5349,7 +5349,7 @@
         "invoiceNum": "4240371",
         "salesPerson": "Jesse - SWS",
         "price": "6.50",
-        "liqName": "Smirnoff Blue",
+        "liqName": "Smirnoff - Blue",
         "quantity": "3 Cases",
         "liqType": "Vodka",
         "liqSize": "375 ml"
@@ -5364,7 +5364,7 @@
         "invoiceNum": "4240371",
         "sellPrice": "19.99",
         "invoiceDate": 1647432000000,
-        "liqName": "Smirnoff Blue"
+        "liqName": "Smirnoff - Blue"
       },
       {
         "$key": "n1y36etXDypXw8eHnaYm",
@@ -5578,7 +5578,7 @@
         "price": "1.35",
         "sellPrice": "1.99",
         "liqSize": "50 ml",
-        "liqName": "Smirnoff Blue",
+        "liqName": "Smirnoff - Blue",
         "quantity": "2 Cases",
         "liqType": "Cognac",
         "invoiceNum": "4355773",
@@ -5590,7 +5590,7 @@
         "sellPrice": "1.99",
         "liqType": "Cognac",
         "invoiceNum": "4355773",
-        "liqName": "Smirnoff Red",
+        "liqName": "Smirnoff - Red",
         "quantity": "2 Cases",
         "price": "1.10",
         "invoiceDate": 1653480000000,
@@ -9919,7 +9919,7 @@
         "$key": "OuVnJWFO1JtQjpHRb9aM",
         "liqType": "Vodka",
         "invoiceNum": "4487377",
-        "liqName": "Smirnoff Red",
+        "liqName": "Smirnoff - Red",
         "liqSize": "750 ml",
         "price": "9.00",
         "salesPerson": "Jesse - SWS",
@@ -9959,7 +9959,7 @@
         "invoiceNum": "4487377",
         "price": "16.47",
         "liqType": "Vodka",
-        "liqName": "Smirnoff Red",
+        "liqName": "Smirnoff - Red",
         "invoiceDate": 1660651200000,
         "liqSize": "1.75 Liter"
       },
@@ -10935,7 +10935,7 @@
         "quantity": "4 Cases",
         "liqSize": "375 ml",
         "price": "6.50",
-        "liqName": "Smirnoff Blue",
+        "liqName": "Smirnoff - Blue",
         "sellPrice": "9.99",
         "salesPerson": "Jesse - SWS"
       },
@@ -10992,7 +10992,7 @@
         "salesPerson": "Jesse - SWS",
         "price": "5.19",
         "sellPrice": "8.99",
-        "liqName": "Smirnoff Red",
+        "liqName": "Smirnoff - Red",
         "liqType": "Vodka",
         "quantity": "6 Cases",
         "invoiceNum": "4552784",
@@ -11520,7 +11520,7 @@
         "$key": "fYqecGyCQr4mknmJMsPK",
         "salesPerson": "Jesse - SWS",
         "invoiceDate": 1666180800000,
-        "liqName": "Smirnoff Blue",
+        "liqName": "Smirnoff - Blue",
         "liqSize": "50 ml",
         "sellPrice": "1.99",
         "price": "1.10",
@@ -11543,7 +11543,7 @@
       {
         "$key": "UAEu6tWqc19TZ7SLbyHB",
         "liqSize": "50 ml",
-        "liqName": "Smirnoff Blue",
+        "liqName": "Smirnoff - Blue",
         "invoiceNum": "4586896",
         "salesPerson": "Jesse - SWS",
         "quantity": "4 Cases",
@@ -12374,7 +12374,7 @@
         "invoiceNum": "16754536",
         "invoiceDate": 1664971200000,
         "salesPerson": "David - Youngs Mkt",
-        "sellPrice": "34.99",
+        "sellPrice": "31.99",
         "quantity": "3 Case",
         "price": "20.24",
         "liqName": "Remy Martin VSOP",
@@ -12993,7 +12993,7 @@
     "liqType": "Vodka",
     "liqSize": "200 ml",
     "sellPrice": "5.49",
-    "liqName": "Smirnoff Red",
+    "liqName": "Smirnoff - Red",
     "invoiceDate": 1668168000000,
     "salesPerson": "Jesse - SWS"
   },
@@ -13002,7 +13002,7 @@
     "quantity": "3 Cases",
     "price": "5.19",
     "liqSize": "375 ml",
-    "liqName": "Smirnoff Red",
+    "liqName": "Smirnoff - Red",
     "liqType": "Vodka",
     "salesPerson": "Jesse - SWS",
     "sellPrice": "8.99",
@@ -13011,7 +13011,7 @@
   },
   {
     "$key": "4fET7WcDRnAQMiqxMEGl",
-    "liqName": "Smirnoff Red",
+    "liqName": "Smirnoff - Red",
     "liqSize": "750 ml",
     "salesPerson": "Jesse - SWS",
     "liqType": "Vodka",
@@ -13031,7 +13031,7 @@
     "sellPrice": "5.99",
     "salesPerson": "Jesse - SWS",
     "liqSize": "200 ml",
-    "liqName": "Smirnoff Blue"
+    "liqName": "Smirnoff - Blue"
   },
   {
     "$key": "DGi0RpTwXBa9ygogoj2r",
@@ -13724,7 +13724,7 @@
     "price": "26.89",
     "liqType": "Tequila",
     "invoiceDate": 1670457600000,
-    "sellPrice": "38.99",
+    "sellPrice": "35.99",
     "liqSize": "750 ml",
     "salesPerson": "Costco",
     "quantity": "12 Bottles",
@@ -15536,7 +15536,7 @@
   },
   {
     "$key": "ssJSfyDwYg918VE97yhw",
-    "sellPrice": "36.99",
+    "sellPrice": "34.99",
     "liqSize": "750 ml",
     "salesPerson": "David - Youngs Mkt",
     "price": "20.83",
@@ -15549,7 +15549,7 @@
   {
     "$key": "24oSuAOVp1Th9RQ7VpmW",
     "invoiceDate": 1671537600000,
-    "sellPrice": "39.99",
+    "sellPrice": "35.99",
     "invoiceNum": "17132181",
     "liqSize": "750 ml",
     "salesPerson": "David - Youngs Mkt",
