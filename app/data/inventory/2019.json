@@ -12625,7 +12625,7 @@
     "liqType": "Brandy",
     "price": "0.66",
     "quantity": "2 Cases",
-    "salesPerson": "David - Youngs Mkt",
+    "salesPerson": "Ralph - Gallo Wines",
     "sellPrice": "0.99"
   },
   {
@@ -15444,7 +15444,7 @@
     "$key": "scyddwjqCGlhkp2pzeHx",
     "invoiceDate": 1574409600000,
     "invoiceNum": "12442001",
-    "liqName": "Weller Larue 128proof",
+    "liqName": "William Larue Weller 128proof",
     "liqSize": "750 ml",
     "liqType": "Whiskey",
     "price": "71.79",

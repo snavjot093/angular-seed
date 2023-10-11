@@ -13,7 +13,6 @@ app.controller('InvenCtrl', ['$scope', '$http','$window', '$timeout',  '$interva
     $scope.totalData = [];
     var callYears = []
     $scope.inventorycheckbox = function(val){
-        debugger;
         if($scope.allFlag =  false){ }
         else{ }
         if(callYears.includes(val)){
@@ -39,7 +38,6 @@ app.controller('InvenCtrl', ['$scope', '$http','$window', '$timeout',  '$interva
         }
     };
     $scope.allcheckbox = function(){
-        debugger;
         $scope.allFlag =  true;
         angular.forEach($scope.dataYears, function(value, key){
             angular.element('.'+value)[0].checked = false;

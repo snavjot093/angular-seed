@@ -1187,7 +1187,7 @@
         "price": "92.50",
         "quantity": "1 Case (price updated in 2022",
         "salesPerson": "Roxana - SWS",
-        "sellPrice": "144.99"
+        "sellPrice": "164.99"
     },
     {
         "$key": "Xtp0qsUWfKk5UUe0YgF4",
@@ -2857,7 +2857,7 @@
         "price": "4.20",
         "quantity": "1 Case",
         "salesPerson": "Roxana - SWS",
-        "sellPrice": "6.99"
+        "sellPrice": "7.99"
     },
     {
         "$key": "nojOV1zJhEMYAh3bMuSt",
@@ -6453,7 +6453,7 @@
         "invoiceNum": "15111742",
         "liqName": "New Amsterdam Regular",
         "quantity": "2 Cases of 10C deal",
-        "salesPerson": "Theo",
+        "salesPerson": "Theo - RNDC",
         "invoiceDate": 1636632000000,
         "price": "0.61",
         "liqSize": "50 ml",
@@ -6469,7 +6469,7 @@
         "liqType": "Vodka",
         "price": "0.61",
         "sellPrice": "0.99",
-        "salesPerson": "Theo",
+        "salesPerson": "Theo - RNDC",
         "quantity": "8 Cases of 10C deal"
     },
     {
@@ -6477,7 +6477,7 @@
         "quantity": "1 Cases of 10C deal",
         "sellPrice": "0.99",
         "liqSize": "50 ml",
-        "salesPerson": "Theo",
+        "salesPerson": "Theo - RNDC",
         "invoiceDate": 1636632000000,
         "price": "0.61",
         "invoiceNum": "15111742",
@@ -6555,7 +6555,7 @@
         "invoiceDate": 1636632000000,
         "sellPrice": "15.99",
         "salesPerson": "David - Youngs Mkt",
-        "quantity": "3 Cases of Gift pack with Mixer ($3.49)",
+        "quantity": "3 Cases of Gift pack with Mixer ($3.49) (price updated(on 10/15/23)",
         "key": "QJP9xLrb3mPwiyXUx7c1"
     },
     {
@@ -6807,7 +6807,7 @@
         "price": "0.66",
         "quantity": "10 Cases",
         "sellPrice": "0.99",
-        "salesPerson": "Theo",
+        "salesPerson": "Theo - RNDC",
         "liqType": "Brandy",
         "invoiceNum": "14989855"
       },
@@ -8047,7 +8047,7 @@
     "$key": "zLKIKI4KYNXLRmnQAREZ",
     "price": "2.67",
     "liqName": "New Amsterdam Pink Whitney",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqType": "Vodka",
     "key": "zLKIKI4KYNXLRmnQAREZ",
     "invoiceDate": 1639828800000,
@@ -8058,7 +8058,7 @@
   },
   {
     "$key": "yxObiF4VBqXYQbievezC",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "price": "15.39",
     "sellPrice": "21.99",
     "invoiceDate": 1639828800000,
@@ -8074,7 +8074,7 @@
     "liqSize": "750 ml",
     "sellPrice": "17.99",
     "invoiceNum": "15321549",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "quantity": "4 Cases of 5C deal",
     "liqName": "La Marca Prosecco",
     "price": "12.02",
@@ -8087,7 +8087,7 @@
     "sellPrice": "4.49",
     "price": "3.00",
     "invoiceDate": 1639828800000,
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "invoiceNum": "15321549",
     "liqSize": "200 ml",
     "liqName": "E & J - Regular"
@@ -8100,7 +8100,7 @@
     "invoiceNum": "15321549",
     "price": "5.69",
     "invoiceDate": 1639828800000,
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "quantity": "1 Case of 28C deal",
     "liqSize": "375 ml"
   },
@@ -8109,7 +8109,7 @@
     "invoiceNum": "15321549",
     "invoiceDate": 1639828800000,
     "key": "vjzdsyqdaamqDCpmv8O7",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqType": "Wine",
     "liqSize": "500 ml",
     "liqName": "Barefoot 4pk - Cabernet",
@@ -8120,7 +8120,7 @@
   {
     "$key": "vXo3bVqyxUnQq4uFvOYs",
     "price": "3.49",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqType": "Wine",
     "sellPrice": "4.99",
     "liqName": "Barefoot Tetra pk - Rose",
@@ -8131,7 +8131,7 @@
   },
   {
     "$key": "sCO4qtdoOfXXVEpBvV2a",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "invoiceDate": 1639828800000,
     "liqSize": "750 ml",
     "liqName": "Barefoot 4pk - White Zinfandel",
@@ -8151,13 +8151,13 @@
     "quantity": "1 Case of 28C deal",
     "price": "4.68",
     "invoiceNum": "15321549",
-    "salesPerson": "Theo"
+    "salesPerson": "Theo - RNDC"
   },
   {
     "$key": "o40AFq8UZn6nDU492Lpz",
     "price": "7.33",
     "invoiceNum": "15321549",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqName": "Apothic Red Blend",
     "sellPrice": "10.99",
     "liqType": "Wine",
@@ -8167,7 +8167,7 @@
   },
   {
     "$key": "nG8gDpfr9e62vVu9YqVX",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqType": "Vodka",
     "liqName": "New Amsterdam Peach",
     "price": "2.67",
@@ -8184,7 +8184,7 @@
     "liqName": "E & J - Peach",
     "liqType": "Brandy",
     "invoiceDate": 1639828800000,
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "quantity": "3 Cases",
     "liqSize": "375 ml",
     "sellPrice": "6.99"
@@ -8198,7 +8198,7 @@
     "invoiceNum": "15321549",
     "price": "7.33",
     "liqName": "Apothic Merlot",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqType": "Wine"
   },
   {
@@ -8206,7 +8206,7 @@
     "liqName": "Chateau BBN Barrel - Cabernet ",
     "quantity": "1 Case",
     "invoiceNum": "15321549",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "price": "7.69",
     "liqSize": "750 ml",
     "liqType": "Wine",
@@ -8217,7 +8217,7 @@
     "$key": "kJQ0bmP6RKdrcOvmbZRx",
     "liqName": "Mark West - Pinot Noir",
     "invoiceDate": 1639828800000,
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "sellPrice": "10.99",
     "liqType": "Wine",
     "price": "7.33",
@@ -8228,7 +8228,7 @@
   {
     "$key": "iTnOwC6pVUZeUcQZEUzT",
     "invoiceDate": 1639828800000,
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqSize": "750 ml",
     "quantity": "1 Case",
     "liqName": "William Hill - Sauvignon Blanc",
@@ -8246,7 +8246,7 @@
     "sellPrice": "0.99",
     "liqType": "Vodka",
     "liqSize": "50 ml",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "price": "0.61"
   },
   {
@@ -8259,7 +8259,7 @@
     "quantity": "3 Cases of 28C deal",
     "invoiceNum": "15321549",
     "liqSize": "375 ml",
-    "salesPerson": "Theo"
+    "salesPerson": "Theo - RNDC"
   },
   {
     "$key": "bSxhrl32B6UnU8PNHbKO",
@@ -8269,7 +8269,7 @@
     "invoiceDate": 1639828800000,
     "invoiceNum": "15321549",
     "sellPrice": "9.99",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqSize": "1.5 Liter",
     "liqType": "Wine"
   },
@@ -8282,7 +8282,7 @@
     "sellPrice": "39.99",
     "price": "25.99",
     "invoiceDate": 1639828800000,
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "invoiceNum": "15321549"
   },
   {
@@ -8291,7 +8291,7 @@
     "liqName": "New Amsterdam Mango",
     "price": "2.67",
     "liqType": "Vodka",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqSize": "200 ml",
     "quantity": "1 Case of 28C deal",
     "invoiceDate": 1639828800000,
@@ -8299,7 +8299,7 @@
   },
   {
     "$key": "X6aRDLF4dWmDxFxgYKYd",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "invoiceDate": 1639828800000,
     "liqSize": "750 ml",
     "sellPrice": "10.99",
@@ -8319,7 +8319,7 @@
     "quantity": "3 Cases",
     "invoiceDate": 1639828800000,
     "liqName": "E & J - Regular",
-    "salesPerson": "Theo"
+    "salesPerson": "Theo - RNDC"
   },
   {
     "$key": "RUH4iAx8QZGBjBNz83A3",
@@ -8331,7 +8331,7 @@
     "sellPrice": "9.99",
     "liqSize": "1.5 Liter",
     "liqType": "Wine",
-    "salesPerson": "Theo"
+    "salesPerson": "Theo - RNDC"
   },
   {
     "$key": "QPZJI3knFRZds9TRXiwM",
@@ -8342,7 +8342,7 @@
     "liqName": "Barefoot 4pk - Moscato",
     "invoiceNum": "15321549",
     "liqType": "Wine",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqSize": "187 ml (4pk)"
   },
   {
@@ -8351,7 +8351,7 @@
     "liqName": "Tullibardine - 15Yrs",
     "invoiceNum": "15321549",
     "liqSize": "750 ml",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "quantity": "1 Case (picked up on 1/12/22)",
     "liqType": "Whiskey",
     "sellPrice": "75.99",
@@ -8365,7 +8365,7 @@
     "quantity": "1 Case",
     "invoiceDate": 1639828800000,
     "price": "7.33",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqName": "Apothic Cabernet",
     "liqSize": "750 ml"
   },
@@ -8373,7 +8373,7 @@
     "$key": "NUO7ayptgaJ748sgDhb6",
     "invoiceDate": 1639828800000,
     "liqType": "Vodka",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqSize": "50 ml",
     "sellPrice": "0.99",
     "price": "0.61",
@@ -8383,7 +8383,7 @@
   },
   {
     "$key": "IxxBaXsYKvMiW8abkI5q",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "invoiceNum": "15321549",
     "price": "3.84",
     "liqName": "Barefoot 4pk - Chardonnay",
@@ -8395,7 +8395,7 @@
   },
   {
     "$key": "H6ydlAkcQPyYUjMQ8W6z",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "invoiceNum": "15321549",
     "invoiceDate": 1639828800000,
     "liqSize": "50 ml",
@@ -8409,7 +8409,7 @@
     "$key": "GTeiMkyyBjyUtjZvldzy",
     "liqSize": "200 ml",
     "price": "3.04",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "sellPrice": "4.99",
     "quantity": "1 Case of 28C deal",
     "liqType": "Vodka",
@@ -8421,7 +8421,7 @@
     "$key": "F7CqEnLy7xI1Y3C8O0lT",
     "liqName": "Barefoot - Cabernet",
     "sellPrice": "9.99",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "price": "6.99",
     "liqType": "Wine",
     "quantity": "1 Case of 15C deal",
@@ -8435,7 +8435,7 @@
     "liqSize": "750 ml",
     "liqType": "Wine",
     "liqName": "Barefoot - Sauvignon Blanc",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "sellPrice": "6.99",
     "invoiceDate": 1639828800000,
     "invoiceNum": "15321549",
@@ -8451,7 +8451,7 @@
     "quantity": "1 Case of 5C deal",
     "price": "12.02",
     "liqName": "La Marca Prosecco Rose",
-    "salesPerson": "Theo"
+    "salesPerson": "Theo - RNDC"
   },
   {
     "$key": "BCRHwj1oou15td3tKW4p",
@@ -8460,7 +8460,7 @@
     "liqName": "New Amsterdam Regular",
     "liqSize": "200 ml",
     "liqType": "Vodka",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "price": "2.67",
     "quantity": "4 Cases of 28C deal",
     "invoiceDate": 1639828800000
@@ -8471,7 +8471,7 @@
     "sellPrice": "14.99",
     "quantity": "1 Case",
     "price": "9.79",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqName": "William Hill - Merlot",
     "liqType": "Wine",
     "invoiceNum": "15321549",
@@ -8483,7 +8483,7 @@
     "sellPrice": "0.99",
     "quantity": "1 Case of 28C deal",
     "liqType": "Vodka",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqName": "New Amsterdam Apple",
     "liqSize": "50 ml",
     "invoiceDate": 1639828800000,
@@ -8496,7 +8496,7 @@
     "liqName": "Barefoot Tetra pk - Chardonnay",
     "price": "3.49",
     "liqSize": "500 ml",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "invoiceDate": 1639828800000,
     "liqType": "Wine",
     "quantity": "2 Cases of 15C deal"
@@ -8504,7 +8504,7 @@
   {
     "$key": "4AYmvuDHdSYYTlCRL3kz",
     "liqType": "Wine",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "invoiceNum": "15321549",
     "liqName": "Barefoot - Moscato",
     "quantity": "1 Case of 15C deal",
@@ -8523,14 +8523,14 @@
     "invoiceDate": 1639828800000,
     "liqSize": "750 ml",
     "liqType": "Wine",
-    "salesPerson": "Theo"
+    "salesPerson": "Theo - RNDC"
   },
   {
     "$key": "2rPA0kIrYLLRoi6h15YY",
     "quantity": "1 Case of 15C deal",
     "liqType": "Wine",
     "price": "3.84",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqSize": "187 ml (4pk)",
     "invoiceNum": "15321549",
     "sellPrice": "5.99",
@@ -8543,7 +8543,7 @@
     "liqName": "New Amsterdam Pineapple",
     "liqSize": "100 ml",
     "invoiceNum": "15321549",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqType": "Vodka",
     "invoiceDate": 1639828800000,
     "sellPrice": "2.99",
@@ -8554,7 +8554,7 @@
     "invoiceNum": "15321549",
     "quantity": "2 Cases of 28C deal",
     "liqType": "Vodka",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "sellPrice": "6.99",
     "invoiceDate": 1639828800000,
     "price": "4.68",
@@ -8625,7 +8625,7 @@
   {
     "$key": "byEGEpVAzTZRNuoNpQoz",
     "sellPrice": "899.99",
-    "liqName": "Thomas Handy",
+    "liqName": "Thomas H. Handy Sazerac Rye",
     "invoiceDate": 1640001600000,
     "salesPerson": "David - Youngs Mkt",
     "liqSize": "750 ml",
@@ -9183,14 +9183,14 @@
     "price": "13.99",
     "invoiceDate": 1635336000000,
     "sellPrice": "21.99",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "liqName": "Camarena - Reposado",
     "liqSize": "750ml"
   },
   {
     "$key": "hVbE3lQdWF6A2cSkfFXw",
     "liqName": "E & J - Regular",
-    "salesPerson": "Theo",
+    "salesPerson": "Theo - RNDC",
     "invoiceNum": "15373287",
     "sellPrice": "0.99",
     "invoiceDate": 1640779200000,

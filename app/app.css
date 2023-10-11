@@ -8,7 +8,7 @@
         'menu main main main main  main main right'
         'footer footer footer footer footer footer footer footer';
     grid-gap: 10px;
-    background-color: #0078B3;
+    background-color: #997070;
     padding: 10px;
 }
 .exp2.grid-container {
@@ -162,7 +162,7 @@ table.table thead th,
 table.table thead tr th a,
 .inventory-header a {
   color: #0db3d0;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .edit-liquor {
@@ -489,4 +489,45 @@ table.createOrder-table>tbody>tr>td>label.create-label{
 }
 .create-input{
   vertical-align: sub;
+}
+.grid-container {
+  display: grid;
+
+  grid-template-columns:20% 10% auto auto auto auto auto auto auto;
+  background-color: #EEE;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #CCFF55;
+  padding: 20px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.auto-grid {
+  --auto-grid-min-size: 14rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
+
+
+/* Presentational styles */
+
+body {
+  background: #efefef;
+  padding: 1rem;
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+
+.auto-grid > div {
+ /* padding: 5rem 1rem;*/
+ padding:2rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  background: #0078B3;/*#eb4d4b;*/
+  color: #ffffff;
 }

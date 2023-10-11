@@ -1,0 +1,16 @@
+<br/>
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+        <input type="text" ng-model="qq" class="form-control" style="position:fixed;top:55px;right:15px;width:320px;"/>
+    </div>
+</div><br/>
+<div class="auto-grid">
+  <div ng-repeat="cb in beerData | filter:qq | orderBy : propertyName:reverse as results track by $index">
+      <h5>{{cb.vendor}}</h5>
+      <div>{{cb.name}}</div>
+      <div>{{cb.date |date:"MMM-dd-yyyy"}}</div>
+      <div>${{cb.unitBuyingPrice}}</div>
+      <div>${{cb.sellingPrice}}</div>
+  </div>
+</div>

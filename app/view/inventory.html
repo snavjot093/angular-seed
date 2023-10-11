@@ -108,7 +108,7 @@
         </div>
     </div>
     <div class="scrollable">
-        <div class="no-table row row-no-margin" ng-repeat="d in tableData | filter:qq | orderBy : propertyName:reverse as results track by $index" style="font-size:12px; font-weight:600;">
+        <div class="no-table row row-no-margin" ng-repeat="d in tableData | filter:qq | orderBy : propertyName:reverse as results track by $index" style="font-size:12px; font-weight:400;">
             <div class="col">
                 <div class="row">
                     <div class="col-sm-3 no-table-col"><span class="desktop-only-no-table" style="color:#0db3d0; float:left;padding-right:10px;font-size: 7px;">{{$index+1}}. </span><label class="m-label">Date:&nbsp;</label>{{d.invoiceDate | date: 'MMM-dd-yy'}}</div>

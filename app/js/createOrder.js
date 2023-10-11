@@ -70,9 +70,9 @@ app.controller('CreateOrderCtrl', ['$scope', '$http','$window', '$timeout',  '$i
                 $scope.liqSellingResponse.push(obj.sellPrice);                  //Getting the selling price from all  the entries
             }
         });
-        $scope.minPrice = $scope.liqBuyingResponse.length > 0 ?  $scope.liqBuyingResponse.reduce((a, b) => Math.min(a, b)) : 0;    //Getting the minimum buying price.
+        $scope.minPrice = $scope.liqBuyingResponse.length > 0 ?  $scope.liqBuyingResponse.reduce((a, b) => Math.min(a, b)) : 0;     //Getting the minimum buying price.
         $scope.maxPrice = $scope.liqBuyingResponse.length > 0 ?  $scope.liqBuyingResponse.reduce((a, b) => Math.max(a, b)) : 0;     //Getting the maxmum buying price.
-        $scope.sellPrice =$scope.liqSellingResponse.length > 0 ? $scope.liqSellingResponse[$scope.liqSellingResponse.length-1] : 0;   // //Getting the most recent selling price.
+        $scope.sellPrice =$scope.liqSellingResponse.length > 0 ? $scope.liqSellingResponse[$scope.liqSellingResponse.length-1] : 0; //Getting the most recent selling price.
         if(count === 0){
             $scope.masterPrice.push({'salesPerson':$scope.liqsalesP,'name':name,'size':size,'min':'', 'max':'','sPrice':''});
         }
