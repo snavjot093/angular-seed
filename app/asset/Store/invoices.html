@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+    <title>Invoices-Hisaab Kitaab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width ,  initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <style>
+        body{font-family: avenir, sans-serif, Helvetica;}
+        .table{width:80%;margin: 0 auto;}
+        .table>tbody>tr>td{padding: 0px 0px;vertical-align: inherit;text-align: left;font-size: 80%;font-weight: 600;}
+        .sortorder:after{content:'\25b2';// BLACK UP-POINTING TRIANGLE}
+        .sortorder.reverse:after {content:'\25bc';// BLACK DOWN-POINTING TRIANGLE }
+        .form-input{border: none;background: inherit;}
+        @font-face{font-family:'Glyphicons Halflings';
+            src:url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot');
+            src:url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot?#iefix')
+            format('embedded-opentype'),
+            url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff')
+            format('woff'),
+            url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf')
+            format('truetype'),
+            url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular')
+            format('svg');
+        }
+        .glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;}
+        .glyphicon-plus-sign:before{content:"\e081"; color:#155724;font-size: 20px;display:inline;cursor: pointer;}
+        .glyphicon-minus-sign:before{content:"\e082"; }
+        .glyphicon-remove-sign:before{content:"\e083"; color:#721c24;font-size: 20px;display:inline;cursor: pointer;}
+        .glyphicon-ok-sign:before{content:"\e084";}
+        .glyphicon-question-sign:before{content:"\e085";}
+        .form-control {font-size: 12px;font-weight: 600;padding-left: 10px;height: calc(1.5rem + 2px);}
+        .form-control:disabled, .form-control[readonly] { }
+        .my-btn{ padding: 3px 25px; border-radius: 24px;color:#FFF;font-weight: 600; cursor: pointer; }
+        .total-btn{background:#721c24;//linear-gradient(to right, #ffe6ff, #710e32);line-height: 1.25;}
+        .print-btn{top:50%;left:75%;position: fixed;background:#155724;}
+        .total-btn:hover{background:#155724;}
+        .print-btn:hover{background:#721c24;//linear-gradient(to right, #ffe6ff, #710e32);}
+        .table-responsive {width: 75%;}
+        .table-responsive>.table{  }
+        .table-responsive>.table thead tr th{background: #e9fafe;color:#6c757d;}
+        .row-total{background: #e9fafe;color: #6c757d;font-size: 24px;line-height: 40px;}
+        .table>tbody>tr>td.td-total{text-align: center;}
+        input.form-control[readonly] {background: inherit;}
+        .total{
+            display: none;
+        }
+        @media print{
+            .no-print{display: none;}
+            .table-responsive{width: 80%;}
+            .total{background: transparent; color: #6c757d; border: none;display: block;}
+        }
+        .line1{
+            width: 20px;background:#000;transform: scale(0deg);
+        }
+        .line2{
+            width: 20px;background:#000;transform: scale(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="ExampleController">
+    <div class="table-responsive">
+        <div style="text-align:center"><input type="text" class="form-control form-input" style="width:250px; border: 1px solid #ced4da;margin: 0 auto;" placeholder="Jeeta Dates ithey likh le"/></div>
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th nowrap ng-click="sortBy('invoiceName')" style="min-width: 181px">Invoice-Name
+                        <span class="sortorder" ng-show="propertyName === 'invoiceName'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th nowrap scope="col" ng-click="sortBy('invoiceTotal')">Invoice Total
+                        <span class="sortorder" ng-show="propertyName === 'invoiceTotal'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th nowrap scope="col" ng-click="sortBy('cigarettes')">Cigarettes
+                        <span class="sortorder" ng-show="propertyName === 'cigarettes'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th nowrap scope="col" ng-click="sortBy('beer')">Beer
+                        <span class="sortorder" ng-show="propertyName === 'beer'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th nowrap scope="col" ng-click="sortBy('nonTaxable')">Non-Taxable
+                        <span class="sortorder" ng-show="propertyName === 'nonTaxable'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th nowrap scope="col" ng-click="sortBy('taxable')">Taxable
+                        <span class="sortorder" ng-show="propertyName === 'taxable'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th colspan="2" class="no-print" ></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="obj in invoiceList track by $index | orderBy:propertyName:reverse" ng-init="">
+                    <td scope="row" style="text-align:center">{{$index+1}}</td>
+                    <td nowrap><input type="text" class="form-control form-input" ng-modal="{{obj.name}}"   ng-value="obj.name" readonly/></td>
+                    <td><input type="text" my-validator num-Input="numInput"class="form-control form-input" ng-model="meriInvoice[$index + 1]"/></td>
+                    <td><input type="text" my-validator num-Input="numInput"class="form-control form-input" ng-model="meriCigarettes[$index + 1]"/></td>
+                    <td><input type="text" my-validator num-Input="numInput"class="form-control form-input" ng-model="meriBeer[$index + 1]"/></td>
+                    <td><input type="text" my-validator num-Input="numInput"class="form-control form-input" ng-model="meraNontax[$index + 1]"/></td>
+                    <td><input type="text" my-validator num-Input="numInput"class="form-control form-input" ng-model="meraTaxable[$index + 1]"
+                        ng-value="meraTaxable[$index + 1]= meriInvoice[$index + 1] - meriCigarettes[$index + 1] - meriBeer[$index + 1] - meraNontax[$index + 1]"readonly
+                        ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+                        ng-style="{'border': meraTaxable[$index + 1] < 0 ? '1px solid red' : ''}"/></td>
+                    <td class="no-print"><i class="glyphicon glyphicon-plus-sign" ng-click="addNewRow(obj,$index,meriInvoice, meriCigarettes, meriBeer,meraNontax,meraTaxable)"data-toggle="tooltip" title="Add another row of this entry"></i></td>
+                    <td class="no-print"><i class="glyphicon glyphicon-remove-sign"ng-click="removeThisRow(obj,$index,meriInvoice, meriCigarettes, meriBeer,meraNontax,meraTaxable)" data-toggle="tooltip" title="Delete this row"></i></td>
+                </tr>
+                <tr class="row-total">
+                    <td colspan="2" class="td-total">
+                        <button type="button" class="no-print my-btn total-btn" ng-click="addEverything(meriInvoice, meriCigarettes, meriBeer,meraNontax,meraTaxable)">Show Total</button>
+                        <span class="total"> Total</span>
+                    </td>
+                    <td class="td-total"><span ng-if='invTotalVal'>$</span>{{invTotalVal | number :2 }}</td>
+                    <td class="td-total"><span ng-if='ciggisTotal'>$</span>{{ciggisTotal | number :2 }}</td>
+                    <td class="td-total"><span ng-if='beerTotal'>$</span>{{beerTotal | number :2 }}</td>
+                    <td class="td-total"><span ng-if='nonTaxTotal'>$</span>{{nonTaxTotal | number :2 }}</td>
+                    <td colspan="3" class="td-total"><span ng-if='taxableTotal'>$</span>{{taxableTotal | number :2 }}</td>
+                </tr>
+            </tbody>
+        </table><br/>
+        <button type="submit" class="no-print my-btn print-btn" ng-click="formReady()">Print</button>
+    </div>
+</div>
+<script>
+    var app = angular.module('store', []);
+    app.controller('ExampleController',function($scope) {
+        $scope.numInput= ['0','1','2','3','4','5','6','7','8','9','.'];
+        $scope.taxable=[];
+        $scope.todaysDate = new Date();
+        $scope.meriInvoice= [];
+        $scope.meriCigarettes= [];
+        $scope.meriBeer =[];
+        $scope.meraNontax = [];
+        $scope.meraTaxable = [];
+        $scope.addEverything = function(meriInvoice, meriCigarettes, meriBeer, meraNontax, meraTaxable){
+            $scope.invTotalVal  =   meriInvoice.reduce((a, b) => Number(a) + Number(b), 0).toFixed(2);
+            $scope.ciggisTotal  =   meriCigarettes.reduce((a, b) => Number(a) + Number(b), 0).toFixed(2);
+            $scope.beerTotal    =   meriBeer.reduce((a, b) => Number(a) + Number(b), 0).toFixed(2);
+            $scope.nonTaxTotal  =   meraNontax.reduce((a, b) => Number(a) + Number(b), 0).toFixed(2);
+            $scope.taxableTotal =   meraTaxable.reduce((a, b) => Number(a) + Number(b), 0);//.toFixed(2);
+        };
+        $scope.addNewRow= function(obj,index,meriInvoice, meriCigarettes, meriBeer, meraNontax, meraTaxable){
+            var count= 0;
+            angular.forEach($scope.invoiceList, function(val,key){
+                if ( val.name === obj.name.replace(/[0-9]/g, '')) {
+                    if(count ===0){
+                        count++;
+                        var addNew ={"name": obj.name, "type":obj.type}
+                        $scope.invoiceList.push(addNew);
+                        $scope.addEverything(meriInvoice, meriCigarettes, meriBeer, meraNontax, meraTaxable)
+                    }
+                }
+            });
+        };
+        $scope.$watch("meraTaxable[$index + 1]",function(newValue,oldValue){
+
+        });
+        $scope.removeThisRow= function(obj,index,meriInvoice, meriCigarettes, meriBeer, meraNontax, meraTaxable){
+            angular.forEach($scope.invoiceList, function(val,key){
+                if ( val === obj) {
+                    $scope.invoiceList.splice(key, 1);
+                    meriInvoice.splice(key+1, 1);
+                    meriCigarettes.splice(key+1, 1);
+                    meriBeer.splice(key+1, 1);
+                    meraNontax.splice(key+1, 1);
+                    meraTaxable.splice(key+1, 1);
+                    $scope.addEverything(meriInvoice, meriCigarettes, meriBeer, meraNontax, meraTaxable)
+                }
+            });
+        };
+/*=============================================================================================================================
+===============================================================================================================================
+
+
+            JEETE DA AREA ----- JUST UNDER THIS
+
+
+===============================================================================================================================
+===============================================================================================================================*/
+
+        $scope.invoiceList =
+        [
+            {"name":"Anheuser-Busch sales", "type":"Taxable"},
+            {"name":"Artic Express", "type":"nonTaxable"},
+            {"name":"Boyds Coffee", "type":"taxable"},
+            {"name":"Bottomly Dist", "type":"taxable"},
+            {"name":"Bimbo", "type":"taxable"},
+            {"name":"Coca-Cola", "type":"both"},
+            {"name":"DBI", "type":"taxable"},
+            {"name":"D&E Distributor", "type":"both"},
+            {"name": "EA Berg (candy)", "type": "nonTaxable"},
+            {"name":"Elavisador", "type":"taxable"},
+            {"name":"Energy Source", "type":"nonTaxable"},
+            {"name":"Frito Lay", "type":"nonTaxable"},
+            {"name":"Gallo Wines", "type":"taxable"},
+            {"name": "Gold Rush", "type":"nonTaxable"},
+			{"name": "Gummy Bear", "type":"nonTaxable"},
+            {"name":"Helados Tapatia", "type":"taxable"},
+            {"name":"Horizon Snacks", "type":"nonTaxable"},
+            {"name":"Ice", "type":"taxable"},
+            {"name":"Icee Company", "type":"taxable"},
+            {"name":"Jerky Gaint", "type":"taxable"},
+            {"name":"J&K Distributor", "type":"both"},
+            {"name":"La Rosa", "type":"nonTaxable"},
+            {"name":"Maddalena", "type":"taxable"},
+            {"name":"Mercury News", "type":"nonTaxable"},
+            {"name":"M Brothers", "type":"nonTaxable"},
+            {"name":"Pitco Foods", "type":"both"},
+            {"name":"Pepsi", "type":"both"},
+            {"name":"Redbull", "type":"taxable"},
+            {"name":"R.J.Icecream", "type":"nonTaxable"},
+            {"name":"Seven-UP", "type":"both"},
+            {"name":"Snack Guy", "type":"nonTaxable"},
+            {"name":"Southern Wines", "type":"taxable"},
+            {"name":"Swisher International", "type":"taxable"},
+			{"name":"Samir Badra", "type":"taxable"},
+			{"name":"Singh Distributor", "type":"taxable"},
+			{"name":"Trumex", "type":"taxable"},
+            {"name":"Wonder Ice-cream", "type":"nonTaxable"},
+            {"name":"Youngs Market", "type":"Taxable"},
+            {"name":"Golden Brands San Jose", "type":"Taxable"}
+        ];
+
+
+
+        $scope.invoiceList.sort();
+        $scope.propertyName = 'name';
+        $scope.reverse = true;
+
+        $scope.sortBy = function(propertyName) {
+            $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+            $scope.propertyName = propertyName;
+        };
+
+
+        $scope.formReady= function(){
+            window.print();
+        }
+
+
+});//========================= END OF THE CONTROLLER============================
+//========================= END OF THE CONTROLLER============================
+
+    app.directive('myValidator', function ($parse) {
+    return {
+        scope: {
+            numInput        : '=numInput'
+        },
+        link: function (scope, elm, attrs) {
+          elm.bind('keypress', function(e){
+            var char = String.fromCharCode(e.which||e.charCode||e.keyCode), matches = [];
+            if (scope.numInput){
+                angular.forEach(scope.numInput, function(value, key){
+                    if(char === value) matches.push(char);
+                  }, matches);
+                  if(matches.length === 0){
+                    e.preventDefault();
+                    return false;
+                  };
+                }
+          });
+        }
+    };
+});
+$(document).ready(function(){
+     $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+</body>
+</html>
