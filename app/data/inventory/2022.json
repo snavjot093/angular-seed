@@ -16088,5 +16088,101 @@
     "liqName": "Hornitos Reposado",
     "quantity": "1 Case of 5C deal",
     "sellPrice": "17.99"
+  },
+  {
+    "$key": "uq91FiIxoBwXt65Lis5L",
+    "invoiceNum": "4681361",
+    "liqSize": "750 ml",
+    "liqName": "Patron Silver",
+    "price": "32.95",
+    "salesPerson": "Roxana - SWS",
+    "invoiceDate": 1671019200000,
+    "liqType": "Tequila",
+    "quantity": "2 Case of 25C deal (ordered @LakeVista)",
+    "sellPrice": "51.99"
+  },
+  {
+    "$key": "mKqZQEdfeXeVYrGwFdjZ",
+    "salesPerson": "Roxana - SWS",
+    "quantity": "3 Case of 25C deal (ordered @LakeVista)",
+    "price": "17.49",
+    "invoiceNum": "4681361",
+    "liqType": "Tequila",
+    "sellPrice": "29.99",
+    "invoiceDate": 1671019200000,
+    "liqSize": "375 ml",
+    "liqName": "Patron Reposado"
+  },
+  {
+    "$key": "VriTtamAwfpjrkAN5mqy",
+    "invoiceNum": "4681361",
+    "liqSize": "200 ml",
+    "quantity": "3 Case of 25C deal (ordered @LakeVista)",
+    "price": "10.44",
+    "sellPrice": "20.99",
+    "liqType": "Tequila",
+    "liqName": "Patron Silver",
+    "invoiceDate": 1671019200000,
+    "salesPerson": "Roxana - SWS"
+  },
+  {
+    "$key": "TdmtLvoSCiSAHDGzZrJc",
+    "quantity": "1 Case of 25C deal (ordered @LakeVista)",
+    "liqType": "Tequila",
+    "salesPerson": "Roxana - SWS",
+    "price": "36.45",
+    "invoiceNum": "4681361",
+    "invoiceDate": 1671019200000,
+    "liqSize": "750 ml",
+    "liqName": "Patron Reposado",
+    "sellPrice": "55.99"
+  },
+  {
+    "$key": "NF4KJ3mWmaNAgEMy89Lw",
+    "quantity": "8 Case of 25C deal (ordered @LakeVista)",
+    "liqSize": "375 ml",
+    "invoiceDate": 1671019200000,
+    "salesPerson": "Roxana - SWS",
+    "liqType": "Tequila",
+    "sellPrice": "27.99",
+    "invoiceNum": "4681361",
+    "price": "16.09",
+    "liqName": "Patron Silver"
+  },
+  {
+    "$key": "M6VtSM3kKPWsycKf9bzx",
+    "quantity": "1 Case of 25C deal (ordered @LakeVista)",
+    "price": "11.00",
+    "sellPrice": "21.99",
+    "liqSize": "200 ml",
+    "salesPerson": "Roxana - SWS",
+    "liqType": "Tequila",
+    "liqName": "Patron Reposado",
+    "invoiceDate": 1671019200000,
+    "invoiceNum": "4681361"
+  },
+  {
+    "$key": "5tkX9nJ5Re6Qe75XPlnW",
+    "liqSize": "375 ml",
+    "quantity": "1 Case of 25C deal (ordered @LakeVista)",
+    "sellPrice": "29.99",
+    "salesPerson": "Roxana - SWS",
+    "price": "18.89",
+    "liqType": "Tequila",
+    "invoiceNum": "4681361",
+    "invoiceDate": 1671019200000,
+    "liqName": "Patron Anejo"
+  },
+  {
+    "$key": "3DD38fj0sYO8eqhrH2Bd",
+    "invoiceNum": "4681361",
+    "invoiceDate": 1671019200000,
+    "salesPerson": "Roxana - SWS",
+    "liqSize": "200 ml",
+    "liqType": "Tequila",
+    "sellPrice": "22.99",
+    "quantity": "1 Case of 25C deal (ordered @LakeVista)",
+    "liqName": "Patron Anejo",
+    "price": "11.75"
   }
 ]
