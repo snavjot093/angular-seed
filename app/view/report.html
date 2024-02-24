@@ -46,9 +46,10 @@
                                     <div class="form-group">
                                         <label for="liqName"> Buying report of Liquor</label>
                                         <!--==select id="liqName"class="form-control" ng-model="liquorName" ng-change="selectLiquorName(liquorName)"  placeholder="Liquor Name"-->
+                                            <input type="search" ng-model="name" class="form-control" />
                                             <select id="liqName"class="form-control" ng-model="liquorName" ng-change="inventorycheckbox(liquorName)"  placeholder="Liquor Name">
                                             <option value=""  ng-selected="$first">Liquor Name</option>
-                                            <option ng-repeat="obj in liquorNameResponse" value="{{obj}}">{{obj}}</option>
+                                            <option ng-repeat="obj in liquorNameResponse | filter: name" value="{{obj}}">{{obj}}</option>
                                         </select>
                                     </div>
                                 </div>
