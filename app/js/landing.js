@@ -3,6 +3,9 @@ var app = angular.module('land.controller', ['ngRoute','stbs-services']);
 
 app.controller('LandCtrl', ['$scope', '$http','$window', '$timeout',  '$interval', '$document','stbsService',function($scope, $http, $window, $timeout,  $interval, $document, stbsService) {
     $scope.beers='Beer is working';
+    var date = new Date();
+    var inceptionYear = 2018;
+    $scope.currentYear = date.getFullYear();
     console.log(JSON.parse($window.localStorage.getItem('localCrats')));
     $scope.savePatient = function(isFormInvalid){
         if(isFormInvalid){
@@ -23,7 +26,7 @@ app.controller('LandCtrl', ['$scope', '$http','$window', '$timeout',  '$interval
     $scope.onSubmit = function(hope){
         console.log(hope);
     }
-    var beerPromise = stbsService.getBeers();
+    var beerPromise = stbsService.getListInventory($scope.currentYear);
     beerPromise.then(function(data) {
         $scope.beerData = data;
     },function(error) {

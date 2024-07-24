@@ -7,10 +7,11 @@
 </div><br/>
 <div class="auto-grid">
   <div ng-repeat="cb in beerData | filter:qq | orderBy : propertyName:reverse as results track by $index">
-      <h5>{{cb.vendor}}</h5>
-      <div>{{cb.name}}</div>
-      <div>{{cb.date |date:"MMM-dd-yyyy"}}</div>
-      <div>${{cb.unitBuyingPrice}}</div>
-      <div>${{cb.sellingPrice}}</div>
+      <h5>Name: {{cb.liqName}}</h5>
+      <div>Size: {{cb.liqSize}}</div>
+      <div>Date: {{cb.invoiceDate |date:"MMM-dd-yyyy"}}</div>
+      <div>Buying: ${{cb.price}}</div>
+      <div>Selling: ${{cb.sellPrice}}</div>
+      <div>Quantity: ${{cb.quantity}}</div>
   </div>
 </div>

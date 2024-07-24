@@ -816,7 +816,7 @@
         "price": "38.33",
         "quantity": "1 Case of 6 Bottles with 2 bottle of Jack D",
         "salesPerson": "David - Youngs Mkt",
-        "sellPrice": "54.99"
+        "sellPrice": "69.99"
     },
     {
         "$key": "dNglWAZx8Mjz36Yuw8ue",
@@ -3718,7 +3718,7 @@
         "$key": "01HReVvJLWXveQJknp5F",
         "invoiceDate": 1616482800000,
         "invoiceNum": "14038798",
-        "liqName": "Pendlton",
+        "liqName": "Pendleton",
         "liqSize": "750 ml",
         "liqType": "Whiskey",
         "price": "14.89",
@@ -3734,7 +3734,7 @@
         "liqSize": "750 ml",
         "liqType": "Wine",
         "price": "11.59",
-        "quantity": "2 Cases of 3C+1C of Sutter home 750ml free",
+        "quantity": "2 Cases of 3C+1C of Sutter home 750 ml free",
         "salesPerson": "David - Youngs Mkt",
         "sellPrice": "16.99"
     },
@@ -3770,7 +3770,7 @@
         "liqSize": "750 ml",
         "liqType": "Wine",
         "price": "11.59",
-        "quantity": "1 Case of 3C+1C of Sutter home 750ml free",
+        "quantity": "1 Case of 3C+1C of Sutter home 750 ml free",
         "salesPerson": "David - Youngs Mkt",
         "sellPrice": "16.99"
     },
@@ -6507,7 +6507,7 @@
         "invoiceNum": "15111743",
         "quantity": "2 Cases of 3C deal",
         "price": "53.25",
-        "liqSize": "750ml"
+        "liqSize": "750 ml"
     },
     {
         "$key": "6BEElIiXh5p5RubgHrwG",
@@ -6538,7 +6538,7 @@
         "invoiceDate": 1636632000000,
         "invoiceNum": "15111743",
         "sellPrice": "23.99",
-        "liqSize": "750ml",
+        "liqSize": "750 ml",
         "liqName": "Bonanza - Cabernet",
         "quantity": "6Bottle Combo",
         "price": "16.50",
@@ -6830,7 +6830,7 @@
         "quantity": "1 Case",
         "price": "17.50",
         "invoiceNum": "3962776",
-        "liqSize": "750ml",
+        "liqSize": "750 ml",
         "sellPrice": "24.99",
         "salesPerson": "Jesse - SWS",
         "liqType": "Wine"
@@ -6838,7 +6838,7 @@
       {
         "$key": "P2GjOhI8I9w0i9Arq795",
         "liqType": "Vodka",
-        "liqSize": "750ml",
+        "liqSize": "750 ml",
         "quantity": "4 Cases",
         "invoiceDate": 1633435200000,
         "invoiceNum": "3962776",
@@ -6888,7 +6888,7 @@
         "price": "6.19",
         "salesPerson": "Roxana - SWS",
         "quantity": "1 Case",
-        "liqSize": "750ml",
+        "liqSize": "750 ml",
         "liqName": "Paul Masson - Apple",
         "liqType": "Brandy",
         "sellPrice": "11.99",
@@ -6941,7 +6941,7 @@
         "sellPrice": "11.99",
         "price": "6.19",
         "invoiceDate": 1634817600000,
-        "liqSize": "750ml"
+        "liqSize": "750 ml"
       },
       {
         "$key": "0FRQFxx1EDIpJS8Hkvn3",
@@ -6958,7 +6958,7 @@
       {
         "$key": "0uRes2Hspz25idhtyDa4",
         "price": "37.83",
-        "liqSize": "750ml",
+        "liqSize": "750 ml",
         "sellPrice": "54.99",
         "invoiceDate": 1638273600000,
         "liqType": "Whiskey",
@@ -7020,7 +7020,7 @@
         "$key": "AJn0MWeJoY4NfO7S79CU",
         "liqName": "Hennessy Privilege",
         "invoiceNum": "4065660",
-        "liqSize": "750ml",
+        "liqSize": "750 ml",
         "price": "47.25",
         "quantity": "2 Cases",
         "salesPerson": "Jesse - SWS",
@@ -7152,7 +7152,7 @@
         "$key": "S6nbH34f85PREBwoHLNM",
         "invoiceDate": 1638273600000,
         "sellPrice": "17.99",
-        "liqSize": "750ml",
+        "liqSize": "750 ml",
         "salesPerson": "Roxana - SWS",
         "liqName": "Jim Beam - Regular",
         "quantity": "1 Case",
@@ -7362,7 +7362,7 @@
         "invoiceDate": 1638273600000,
         "liqName": "Don Julio Reposado",
         "sellPrice": "58.99",
-        "liqSize": "750ml",
+        "liqSize": "750 ml",
         "quantity": "2 Cases",
         "salesPerson": "Jesse - SWS"
       },
@@ -9185,7 +9185,7 @@
     "sellPrice": "21.99",
     "salesPerson": "Theo - RNDC",
     "liqName": "Camarena - Reposado",
-    "liqSize": "750ml"
+    "liqSize": "750 ml"
   },
   {
     "$key": "hVbE3lQdWF6A2cSkfFXw",
@@ -9403,7 +9403,7 @@
     "invoiceDate": 1640952000000,
     "sellPrice": "32.99",
     "liqType": "Champagne",
-    "liqSize": "750ml",
+    "liqSize": "750 ml",
     "price": "19.09",
     "quantity": "13 Cases of 25C+3C Deal",
     "liqName": "Belaire Rare Rose (black bottle)",
@@ -9415,7 +9415,7 @@
     "liqType": "Champagne",
     "invoiceDate": 1640952000000,
     "invoiceNum": "15391759",
-    "liqSize": "750ml",
+    "liqSize": "750 ml",
     "price": "19.09",
     "quantity": "5 Cases of 25C+3C Deal",
     "sellPrice": "32.99",
@@ -9431,12 +9431,12 @@
     "salesPerson": "David - Youngs Mkt",
     "sellPrice": "32.99",
     "quantity": "4 Cases of 25C+3C Deal",
-    "liqSize": "750ml"
+    "liqSize": "750 ml"
   },
   {
     "$key": "IpDxKEQMKMjUNO7LUEMF",
     "invoiceNum": "15391759",
-    "liqSize": "750ml",
+    "liqSize": "750 ml",
     "key": "IpDxKEQMKMjUNO7LUEMF",
     "liqType": "Champagne",
     "quantity": "6 Cases of 25C+3C Deal",

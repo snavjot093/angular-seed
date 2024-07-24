@@ -1444,7 +1444,7 @@
       {
         "$key": "U4p1fvrzu4dUxgYn5RiI",
         "sellPrice": "11.99",
-        "liqSize": "750ml",
+        "liqSize": "750 ml",
         "salesPerson": "Roxana - SWS",
         "price": "8.19",
         "liqName": "7 Moons Dark Side - Red Blend",
@@ -1455,7 +1455,7 @@
       },
       {
         "$key": "Ow0usZ5S8KEq9j0gW10d",
-        "liqSize": "750ml",
+        "liqSize": "750 ml",
         "invoiceNum": "4166554",
         "quantity": "1 Case (Returning. Asked for Rose')",
         "salesPerson": "Roxana - SWS",
@@ -3809,7 +3809,7 @@
         "invoiceNum": "4300615",
         "quantity": "2 Cases",
         "invoiceDate": 1650542400000,
-        "sellPrice": "11.99",
+        "sellPrice": "10.99",
         "liqType": "Vodka"
       },
       {
@@ -5807,7 +5807,7 @@
         "liqName": "Gilbeys",
         "liqType": "Vodka",
         "quantity": "2 Cases",
-        "sellPrice": "11.99",
+        "sellPrice": "10.99",
         "invoiceDate": 1649937600000,
         "salesPerson": "Roxana - SWS",
         "price": "6.21",
